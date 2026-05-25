@@ -26,8 +26,10 @@ function submitGuess() {
       if (/[a-zA-Z]/.test(guess)) {
           document.getElementById("message").textContent = "Do not insert letters.";
 	  } else if (guess === "") {
-		  document.getElementById("message").textContent = "Enter 5 numbers";
-      } else {
+		  document.getElementById("message").textContent = "Do not enter empty space.";
+      } else if (guess === /[^a-zA-Z0-9]/.test(guess)) {
+		  document.getElementById("message").textContent = "Do not enter special characters.";
+	  } else {
           document.getElementById("message").textContent = "Enter exactly 5 numbers.";
       }
 setTimeout(() => {
