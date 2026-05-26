@@ -26,7 +26,7 @@ function submitGuess() {
       if (/[a-zA-Z]/.test(guess)) {
           document.getElementById("message").textContent = "Do not insert letters.";
 	  } else if (guess === "") {
-		  document.getElementById("message").textContent = "Do not enter a empty space.";
+		  document.getElementById("message").textContent = "Do not enter an empty space.";
 	  } else if (guess === " " || guess === "  " || guess === "   " || guess === "    " || guess === "     ") {
 		  document.getElementById("message").textContent = "Do not enter empty spaces.";
       } else if (/[^a-zA-Z0-9]/.test(guess)) {
