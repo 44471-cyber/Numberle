@@ -45,9 +45,12 @@ input {
   font-family: 'Commodore 64', sans-serif;
   padding: 5px;
   width: 280px;
+  height: 21px;
   text-align: left;
   border-color: black;
   cursor: text;
+  vertical-align: middle;
+  margin: 0;
 }
 input::placeholder {
   color: #3050aa;
@@ -61,4 +64,6 @@ button {
   font-family: 'Commodore 64', sans-serif;
   margin-left: 5px;
   cursor: pointer;
+  vertical-align: middle;
+  margin: 0;
 }
