@@ -67,3 +67,7 @@ button {
   vertical-align: middle;
   margin: 0;
 }
+#restartBtn {
+    background-color: gold;
+    border-color: #9c8300;
+}
