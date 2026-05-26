@@ -18,7 +18,7 @@ h1 {
 .row {
   display: grid;
   grid-template-columns: repeat(5, 62.5px);
-  gap: 5px;
+  gap: 6px;
 }
 .cell {
   width: 60px;
@@ -46,9 +46,11 @@ input {
   padding: 5px;
   width: 280px;
   text-align: left;
+  border-color: black;
+  cursor: text;
 }
 button {
-  background-color: #00e74d;
+  background-color: #00e645;
   border-color: #008320;
   padding: 8px 15px;
   font-size: 1.25rem;
