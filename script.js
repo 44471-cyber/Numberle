@@ -92,6 +92,7 @@ function restartGame() {
   console.log("New Answer:", answer);
 }
 const guessInput = document.getElementById("guessInput");
+guessInput.setAttribute("inputmode", "numeric");
 guessInput.addEventListener("input", () => {
 	guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
 });
