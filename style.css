@@ -4,6 +4,7 @@ body {
     font-size: 1.25rem;
     text-align: center;
     background-image: url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png');
+    background-color: #3050aa;
     background-attachment: fixed;
     background-size: cover;
 }
