@@ -63,7 +63,7 @@ setTimeout(() => {
       document.getElementById("message").textContent = "You win!";
       document.getElementById("restartBtn").style.display = "inline-block";
       document.getElementById("guessBtn").style.display = "none";
-input.value = "";
+	  input.value = "";
       return;
   }
   currentRow++;
