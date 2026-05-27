@@ -4,7 +4,6 @@ body {
     font-size: 1.25rem;
     text-align: center;
     background-image: url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png');
-    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -57,7 +56,6 @@ input {
 }
 input::placeholder {
     color: #3050aa;
-    opacity: 0.75;
 }
 button {
     background-color: #00e645;
