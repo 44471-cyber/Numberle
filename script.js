@@ -29,9 +29,7 @@ function submitGuess() {
 		  document.getElementById("message").textContent = "Do not enter an empty space.";
 	  } else if (guess === " " || guess === "  " || guess === "   " || guess === "    " || guess === "     ") {
 		  document.getElementById("message").textContent = "Do not enter empty spaces.";
-      } else if (/[^a-zA-Z0-9]/.test(guess)) {
-		  document.getElementById("message").textContent = "Do not enter special characters.";
-	  } else {
+      } else {
           document.getElementById("message").textContent = "Enter exactly 5 numbers.";
       }
 setTimeout(() => {
@@ -94,3 +92,7 @@ function restartGame() {
   document.getElementById("guessBtn").style.display = "inline-block";
   console.log("New Answer:", answer);
 }
+const guessInput = document.getElementById("guessInput");
+guessInput.addEventListener("input", () => {
+	guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
+});
