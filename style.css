@@ -1,9 +1,12 @@
 body {
     font-family: 'Commodore 64', sans-serif;
-    background: #3050aa;
     color: white;
     font-size: 1.25rem;
     text-align: center;
+    background-image: url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 h1 {
     margin-top: 20px;
