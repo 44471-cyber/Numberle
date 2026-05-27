@@ -27,9 +27,7 @@ function submitGuess() {
           document.getElementById("message").textContent = "Do not insert letters.";
 	  } else if (guess === "") {
 		  document.getElementById("message").textContent = "Do not enter an empty space.";
-	  } else if (guess === " " || guess === "  " || guess === "   " || guess === "    " || guess === "     ") {
-		  document.getElementById("message").textContent = "Do not enter empty spaces.";
-      } else {
+	  } else {
           document.getElementById("message").textContent = "Enter exactly 5 numbers.";
       }
 setTimeout(() => {
