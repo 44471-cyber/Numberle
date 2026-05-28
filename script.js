@@ -23,9 +23,7 @@ function submitGuess() {
   const messageEl = document.getElementById("message");
   const guess = input.value;
   if (!/^\d{5}$/.test(guess)) {
-      if (/[a-zA-Z]/.test(guess)) {
-          document.getElementById("message").textContent = "Do not insert letters.";
-	  } else if (guess === "") {
+      if (guess === "") {
 		  document.getElementById("message").textContent = "Do not enter an empty space.";
 	  } else {
           document.getElementById("message").textContent = "Enter exactly 5 numbers.";
