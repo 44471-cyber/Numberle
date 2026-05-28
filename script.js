@@ -240,7 +240,9 @@ function submitGuess() {
     if (guess === answer) {
         gameState = 'win';
         messageEl.textContent = t.win;
-	    input.value = "";
+        document.getElementById("restartBtn").style.display = "inline-block";
+        document.getElementById("guessBtn").style.display = "none";
+	       input.value = "";
         return;
     }
     currentRow++;
