@@ -43,6 +43,15 @@ h1 {
 .absent {
     background-color: #3a3a3c;
 }
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
 input {
     font-size: 1.5rem;
     font-family: 'Commodore 64', sans-serif;
@@ -82,4 +91,98 @@ button:hover {
 #restartBtn:hover {
     background-color: #9e8500;
     border-color: #615100;
+}
+#langBtn {
+    display: block;
+    margin: auto;
+    margin-top: 6px;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a6fd4;
+    border-color: #0d4a9e;
+    color: white;
+    transition: 0ms;
+}
+#langBtn:hover {
+    background-color: #1556aa;
+    border-color: #051c3b;
+}
+.lang-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.70);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lang-menu {
+    background-color: #1a1a2e;
+    border: 3px solid white;
+    padding: 20px;
+    max-width: 480px;
+    width: 90%;
+}
+.lang-menu-title {
+    font-family: 'Commodore 64', sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    margin: 0 0 14px 0;
+    text-align: center;
+}
+.lang-menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.lang-item {
+    background-color: #3050aa;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 10px;
+    font-family: 'Commodore 64', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+    transition: 0ms;
+}
+.lang-item:hover {
+    background-color: #1a6fd4;
+    border-color: #00e645;
+}
+.lang-item.active {
+    background-color: #538d4e;
+    border-color: #00e645;
+}
+.lang-close-btn {
+    width: 100%;
+    background-color: #3a3a3c;
+    border-color: #888;
+    color: white;
+    padding: 8px;
+    font-family: 'Commodore 64', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0ms;
+}
+.lang-close-btn:hover {
+    background-color: #555;
+    border-color: white;
+}
+#message {
+    margin-top: 10px;
+}
+@media (max-width: 420px) {
+    input {
+        width: 220px;
+        font-size: 1.1rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: 7px 10px;
+    }
+    .lang-menu-grid {
+        grid-template-columns: 1fr;
+    }
 }
