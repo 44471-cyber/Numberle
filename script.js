@@ -180,6 +180,13 @@ document.getElementById("langOverlay").addEventListener("click", function(e) {
     if (e.target === this) closeLangMenu();
 });
 document.getElementById("langBtn").addEventListener("click", openLangMenu);
+function generateNumber() {
+    let num = "";
+    for (let i = 0; i < 5; i++) {
+        num += Math.floor(Math.random() * 10);
+    }
+    return num;
+}
 let answer = generateNumber();
 let currentRow = 0;
 let gameState = null;
@@ -193,14 +200,7 @@ for (let i = 0; i < 6; i++) {
         row.appendChild(cell);
     }
     board.appendChild(row);
-}
-function generateNumber() {
-    let num = "";
-    for (let i = 0; i < 5; i++) {
-        num += Math.floor(Math.random() * 10);
-    }
-    return num;
-}
+}
 function submitGuess() {
     const input = document.getElementById("guessInput");
     const messageEl = document.getElementById("message");
