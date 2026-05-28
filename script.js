@@ -250,6 +250,8 @@ function submitGuess() {
     if (currentRow === 6) {
         gameState = 'gameover';
         messageEl.textContent = t.gameover + answer;
+        document.getElementById("restartBtn").style.display = "inline-block";
+        document.getElementById("guessBtn").style.display = "none";
     }
 }
 console.log("Answer:", answer);
