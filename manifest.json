@@ -3,8 +3,8 @@
   "short_name": "Numberle",
   "start_url": "/Numberle/",
   "display": "standalone",
-  "background_color": "#1a6fd4",
-  "theme_color": "#1a6fd4",
+  "background_color": "#3050aa",
+  "theme_color": "#3050aa",
   "icons": [
     {
       "src": "numberle favicon new.png",
