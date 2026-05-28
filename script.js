@@ -148,6 +148,12 @@ function applyLang(code) {
     document.getElementById("chooseLang").textContent = t.chooseLang;
     document.getElementById("close").textContent = t.closeBtn;
     buildLangMenuItems();
+    const messageEl = document.getElementById("message");
+    if (gameState === 'win') {
+        messageEl.textContent = t.win;
+    } else if (gameState === 'gameover') {
+        messageEl.textContent = t.gameover + answer;
+    }
 }
 function buildLangMenuItems() {
     const grid = document.getElementById("langMenuGrid");
@@ -176,6 +182,7 @@ document.getElementById("langOverlay").addEventListener("click", function(e) {
 document.getElementById("langBtn").addEventListener("click", openLangMenu);
 let answer = generateNumber();
 let currentRow = 0;
+let gameState = null;
 const board = document.getElementById("board");
 for (let i = 0; i < 6; i++) {
     const row = document.createElement("div");
@@ -231,18 +238,16 @@ function submitGuess() {
         }
     }
     if (guess === answer) {
+        gameState = 'win';
         messageEl.textContent = t.win;
-        document.getElementById("restartBtn").style.display = "inline-block";
-        document.getElementById("guessBtn").style.display = "none";
 	    input.value = "";
         return;
     }
     currentRow++;
     input.value = "";
     if (currentRow === 6) {
+        gameState = 'gameover';
         messageEl.textContent = t.gameover + answer;
-        document.getElementById("restartBtn").style.display = "inline-block";
-        document.getElementById("guessBtn").style.display = "none";
     }
 }
 console.log("Answer:", answer);
@@ -256,6 +261,7 @@ function restartGame() {
             row[j].classList.remove("correct", "present", "absent");
         }
     }
+    gameState = null;
     document.getElementById("guessInput").value = "";
     document.getElementById("message").textContent = "";
     document.getElementById("restartBtn").style.display = "none";
