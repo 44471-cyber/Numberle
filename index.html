@@ -15,12 +15,20 @@
 </head>
 <body>
     <h1>Numberle</h1>
-    <p>Guess the 5-digit number!</p>
+    <p id="subtitle">Guess the 5-digit number!</p>
     <div id="board"></div>
     <input id="guessInput" maxlength="5" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Enter 5 numbers" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
     <button id="guessBtn" onclick="submitGuess()">Guess</button>
     <button id="restartBtn" onclick="restartGame()" style="display:none;">Retry</button>
+    <button id="langBtn">Language</button>
     <p id="message"></p>
+    <div id="langOverlay" class="lang-overlay" style="display:none;">
+        <div id="langMenu" class="lang-menu">
+            <p id="chooseLang" class="lang-menu-title">Choose Language</p>
+            <div class="lang-menu-grid" id="langMenuGrid"></div>
+            <button id="close" class="lang-close-btn" onclick="closeLangMenu()">&#10005; Close</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
