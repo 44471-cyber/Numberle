@@ -20,7 +20,7 @@ const TRANSLATIONS = {
         empty:       "Nao escrevas um espaco vazio.",
         invalid:     "Escreve exatamente 5 numeros.",
         win:         "Ganhaste!",
-        gameover:    "Fim de jogo! O numero era: ",
+        gameover:    "Fim do jogo! O numero era: ",
         langBtn:     "Idioma",
         chooseLang:  "Escolher Idioma",
         closeBtn:    "\u2715 Fechar"
