@@ -18,7 +18,7 @@ const TRANSLATIONS = {
         guessBtn:    "Adivinhar",
         retryBtn:    "Recomeçar",
         empty:       "Não escrevas um espaço vazio.",
-        invalid:     "Escreve exatamente 5 números.",
+        invalid:     "Escreva exatamente 5 números.",
         win:         "Ganhaste!",
         gameover:    "Fim do jogo! O número era: ",
         langBtn:     "Idioma",
