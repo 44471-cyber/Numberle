@@ -100,7 +100,7 @@ const TRANSLATIONS = {
         win:         "Wygra\u0142e\u015b!",
         gameover:    "Koniec gry! Liczba to: ",
         langBtn:     "J\u0119zyk",
-		closeBtn: "\u2715 Zamknij"
+        closeBtn: "\u2715 Zamknij"
     },
     ja: {
         subtitle:    "5\u684c\u306e\u6570\u5b57\u3092\u5f53\u3066\u3088\u3046\uff01",
@@ -111,7 +111,8 @@ const TRANSLATIONS = {
         invalid:     "\u6570\u5b57\u3092\u6b63\u78ba\u306b5\u3064\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
         win:         "\u6b63\u89e3\uff01",
         gameover:    "\u30b2\u30fc\u30e0\u30aa\u30fc\u30d0\u30fc\uff01\u6b63\u89e3\u306f: ",
-        langBtn:     "\u8a00\u8a9e"
+        langBtn:     "\u8a00\u8a9e",
+        closeBtn: "\u2715"
     },
     zh: {
         subtitle:    "\u731c\u51fa5\u4f4d\u6570\u5b57\uff01",
@@ -122,7 +123,8 @@ const TRANSLATIONS = {
         invalid:     "\u8bf7\u8f93\u5165\u6070\u597d5\u4f4d\u6570\u5b57\u3002",
         win:         "\u4f60\u8d62\u4e86\uff01",
         gameover:    "\u6e38\u620f\u7ed3\u675f\uff01\u7b54\u6848\u662f: ",
-        langBtn:     "\u8bed\u8a00"
+        langBtn:     "\u8bed\u8a00",
+        closeBtn: "\u2715"
     }
 };
 const LANG_LIST = [
