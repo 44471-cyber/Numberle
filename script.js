@@ -99,7 +99,8 @@ const TRANSLATIONS = {
         invalid:     "Wpisz dok\u0142adnie 5 cyfr.",
         win:         "Wygra\u0142e\u015b!",
         gameover:    "Koniec gry! Liczba to: ",
-        langBtn:     "J\u0119zyk"
+        langBtn:     "J\u0119zyk",
+		closeBtn: "\u2715 Zamknij"
     },
     ja: {
         subtitle:    "5\u684c\u306e\u6570\u5b57\u3092\u5f53\u3066\u3088\u3046\uff01",
@@ -200,7 +201,8 @@ for (let i = 0; i < 6; i++) {
         row.appendChild(cell);
     }
     board.appendChild(row);
-}
+}
+
 function submitGuess() {
     const input = document.getElementById("guessInput");
     const messageEl = document.getElementById("message");
