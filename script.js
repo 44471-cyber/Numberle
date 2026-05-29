@@ -94,7 +94,7 @@ const TRANSLATIONS = {
         subtitle:    "Zgadnij 5-cyfrow\u0105 liczb\u0119!",
         placeholder: "Wpisz 5 cyfr",
         guessBtn:    "Zgadnij",
-        retryBtn:    "Spr\u00f3buj ponownie",
+        retryBtn:    "Sprobuj ponownie",
         empty:       "Nie wpisuj pustego pola.",
         invalid:     "Wpisz dok\u0142adnie 5 cyfr.",
         win:         "Wygra\u0142e\u015b!",
