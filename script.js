@@ -100,8 +100,21 @@ const TRANSLATIONS = {
         win:         "Wygra\u0142e\u015b!",
         gameover:    "Koniec gry! Liczba to: ",
         langBtn:     "J\u0119zyk",
-        closeBtn: "\u2715 Zamknij"
+        closeBtn:    "\u2715 Zamknij"
     },
+	bg: {
+		subtitle:    "Познай 5-цифреното число!",
+		placeholder: "Въведете 5 числа",
+		guessBtn:    "Познайте",
+		retryBtn:    "Опитайте отново",
+		empty:       "Не влизайте в празно пространство.",
+		invalid:     "Въведете точно 5 числа.",
+		win:         "Вие печелите!",
+		gameover:    "Край на играта! Номерът беше: ",
+		langBtn:     "Език",
+		chooseLang:  "Изберете език",
+		closeBtn:    "\u2715 Затворете",
+	},
     ja: {
         subtitle:    "5\u684c\u306e\u6570\u5b57\u3092\u5f53\u3066\u3088\u3046\uff01",
         placeholder: "\u6570\u5b57\u30925\u3064\u5165\u529b",
@@ -112,7 +125,7 @@ const TRANSLATIONS = {
         win:         "\u6b63\u89e3\uff01",
         gameover:    "\u30b2\u30fc\u30e0\u30aa\u30fc\u30d0\u30fc\uff01\u6b63\u89e3\u306f: ",
         langBtn:     "\u8a00\u8a9e",
-        closeBtn: "\u2715"
+        closeBtn:    "\u2715"
     },
     zh: {
         subtitle:    "\u731c\u51fa5\u4f4d\u6570\u5b57\uff01",
@@ -124,7 +137,7 @@ const TRANSLATIONS = {
         win:         "\u4f60\u8d62\u4e86\uff01",
         gameover:    "\u6e38\u620f\u7ed3\u675f\uff01\u7b54\u6848\u662f: ",
         langBtn:     "\u8bed\u8a00",
-        closeBtn: "\u2715"
+        closeBtn:    "\u2715"
     }
 };
 const LANG_LIST = [
@@ -136,6 +149,7 @@ const LANG_LIST = [
     { code: "it", flag: "🇮🇹", name: "Italiano" },
     { code: "nl", flag: "🇳🇱", name: "Nederlands" },
     { code: "pl", flag: "🇵🇱", name: "Polski" },
+	{ code: "bg", flag: "🇧🇬", name: "Български"},
     { code: "ja", flag: "🇯🇵", name: "日本語" },
     { code: "zh", flag: "🇨🇳", name: "中文" }
 ];
