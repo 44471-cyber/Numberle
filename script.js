@@ -1,3 +1,6 @@
+const DEFAULT_BG_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
+const DEFAULT_BG_COLOR = "#3050aa";
+const BG_BULGARIAN_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(bulgarian).png')";
 const TRANSLATIONS = {
     en: {
         subtitle:    "Guess the 5-digit number!",
@@ -154,6 +157,14 @@ const LANG_LIST = [
     { code: "zh", flag: "🇨🇳", name: "中文" }
 ];
 let currentLang = "en";
+function applyBackground(code) {
+    if (code === "bg") {
+        document.body.style.backgroundImage = BG_BULGARIAN_IMAGE;
+    } else {
+        document.body.style.backgroundImage = DEFAULT_BG_IMAGE;
+    }
+    document.body.style.backgroundColor = DEFAULT_BG_COLOR;
+}
 function applyLang(code) {
     currentLang = code;
     const t = TRANSLATIONS[code];
@@ -166,11 +177,13 @@ function applyLang(code) {
     document.getElementById("close").textContent = t.closeBtn;
     buildLangMenuItems();
     const messageEl = document.getElementById("message");
-    if (gameState === 'win') {
+    applyBackground(code);
+    if (gameState === "win") {
         messageEl.textContent = t.win;
-    } else if (gameState === 'gameover') {
+    } else if (gameState === "gameover") {
         messageEl.textContent = t.gameover + answer;
     }
+    buildLangMenuItems();
 }
 function buildLangMenuItems() {
     const grid = document.getElementById("langMenuGrid");
