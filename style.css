@@ -1,7 +1,7 @@
 body {
-    font-family: 'Commodore 64', sans-serif;
+    font-family: Monospace;
     color: white;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-align: center;
     background-image: url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png');
     background-color: #3050aa;
@@ -9,7 +9,14 @@ body {
     background-size: cover;
 }
 h1 {
-    margin-top: 20px;
+    font-family: 'Commodore 64', Sans-Serif;
+    margin-top: 25px;
+    font-size: 3rem;
+}
+#subtitle {
+    font-weight: bold;
+    margin-top: -25px;
+    margin-bottom: -5px;
 }
 #board {
     display: grid;
@@ -26,7 +33,7 @@ h1 {
 .cell {
     width: 60px;
     height: 60px;
-    font-family: 'Commodore 64', sans-serif;
+    font-family: 'Commodore 64', Sans-Serif;
     border: 2px solid white;
     font-size: 2rem;
     display: flex;
@@ -54,10 +61,11 @@ h1 {
 }
 input {
     font-size: 1.5rem;
-    font-family: 'Commodore 64', sans-serif;
+    font-family: Monospace, sans-serif;
+    font-weight: bold;
     padding: 5px;
     width: 280px;
-    height: 21px;
+    height: 29px;
     text-align: left;
     border-color: black;
     cursor: text;
@@ -72,7 +80,8 @@ button {
     border-color: #008320;
     padding: 8px 15px;
     font-size: 1.25rem;
-    font-family: 'Commodore 64', sans-serif;
+    font-family: Monospace;
+    font-weight: bold;
     margin-left: 5px;
     cursor: pointer;
     vertical-align: middle;
@@ -124,7 +133,7 @@ button:hover {
     width: 90%;
 }
 .lang-menu-title {
-    font-family: 'Commodore 64', sans-serif;
+    font-family: Monospace;
     font-size: 1.1rem;
     color: white;
     margin: 0 0 14px 0;
@@ -141,7 +150,7 @@ button:hover {
     color: white;
     border: 2px solid white;
     padding: 8px 10px;
-    font-family: 'Commodore 64', sans-serif;
+    font-family: Monospace;
     font-size: 0.95rem;
     cursor: pointer;
     text-align: left;
@@ -161,7 +170,7 @@ button:hover {
     border-color: #888;
     color: white;
     padding: 8px;
-    font-family: 'Commodore 64', sans-serif;
+    font-family: Monospace;
     font-size: 1rem;
     cursor: pointer;
     transition: 0ms;
