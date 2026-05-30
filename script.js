@@ -162,7 +162,7 @@ const LANG_LIST = [
 ];
 let currentLang = "en";
 function applyBackground(code) {
-	const isMobile = window.innerWidth <= 768;
+	const isMobile = window.matchMedia("(max-width: 768px)").matches;
     if (code === "bg") {
         document.body.style.backgroundImage = BG_BULGARIAN_IMAGE;
 	} else if (code === "pt") {
@@ -174,6 +174,7 @@ function applyBackground(code) {
     }
     document.body.style.backgroundColor = DEFAULT_BG_COLOR;
 }
+window.matchMedia("(max-width: 768px)").addEventListener("change", () => applyBackground(currentLang));
 function applyLang(code) {
     currentLang = code;
     const t = TRANSLATIONS[code];
