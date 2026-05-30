@@ -1,6 +1,10 @@
 const DEFAULT_BG_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
 const DEFAULT_BG_COLOR = "#3050aa";
 const BG_BULGARIAN_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(bulgarian).png')";
+const DEFAULT_PT_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
+const DEFAULT_PT_COLOR = "#3050aa";
+const PT_PORTUGUESE_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(portugal)%20(standard).png')";
+const PT_PORTUGUESE_MOBILE_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(portugal)%20(mobile).png')";
 const TRANSLATIONS = {
     en: {
         subtitle:    "Guess the 5-digit number!",
@@ -145,9 +149,9 @@ const TRANSLATIONS = {
 };
 const LANG_LIST = [
     { code: "en", flag: "🇬🇧", name: "English" },
-    { code: "pt", flag: "🇵🇹", name: "Portugues" },
-    { code: "es", flag: "🇪🇸", name: "Espanol" },
-    { code: "fr", flag: "🇫🇷", name: "Francais" },
+    { code: "pt", flag: "🇵🇹", name: "Português" },
+    { code: "es", flag: "🇪🇸", name: "Español" },
+    { code: "fr", flag: "🇫🇷", name: "Français" },
     { code: "de", flag: "🇩🇪", name: "Deutsch" },
     { code: "it", flag: "🇮🇹", name: "Italiano" },
     { code: "nl", flag: "🇳🇱", name: "Nederlands" },
@@ -158,8 +162,13 @@ const LANG_LIST = [
 ];
 let currentLang = "en";
 function applyBackground(code) {
+	const isMobile = window.innerWidth <= 768;
     if (code === "bg") {
         document.body.style.backgroundImage = BG_BULGARIAN_IMAGE;
+	} else if (code === "pt") {
+		document.body.style.backgroundImage = isMobile
+            ? PT_PORTUGUESE_MOBILE_IMAGE
+            : PT_PORTUGUESE_IMAGE;
     } else {
         document.body.style.backgroundImage = DEFAULT_BG_IMAGE;
     }
