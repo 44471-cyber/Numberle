@@ -122,6 +122,19 @@ const TRANSLATIONS = {
 		chooseLang:  "Изберете език",
 		closeBtn:    "\u2715 Затворете",
 	},
+	ru: {
+		subtitle:    "Угадайте пятизначное число!",
+		placeholder: "Введите 5 цифр",
+		guessBtn:    "Угадайте",
+		retryBtn:    "Повторить попытку",
+		empty:       "Не заходите в пустое пространство.",
+		invalid:     "Введите ровно 5 чисел.",
+		win:         "Пожалуйста, введите ровно 5 чисел.",
+		gameover:    "Игра окончена! Число было:",
+		langBtn:     "Язык",
+		chooseLang:  "Выберите язык",
+		closeBtn:    "\u2715 Закрывать",
+	},
     ja: {
         subtitle:    "5\u684c\u306e\u6570\u5b57\u3092\u5f53\u3066\u3088\u3046\uff01",
         placeholder: "\u6570\u5b57\u30925\u3064\u5165\u529b",
@@ -157,6 +170,7 @@ const LANG_LIST = [
     { code: "nl", flag: "🇳🇱", name: "Nederlands" },
     { code: "pl", flag: "🇵🇱", name: "Polski" },
 	{ code: "bg", flag: "🇧🇬", name: "Български"},
+	{ code: "ru", flag: "🇷🇺", name: "Русский"},
     { code: "ja", flag: "🇯🇵", name: "日本語" },
     { code: "zh", flag: "🇨🇳", name: "中文" }
 ];
