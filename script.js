@@ -207,6 +207,7 @@ function applyBackground(code) {
         bg.style.opacity = "0.65";
     } else if (code === "ja") {
         bg.style.backgroundImage = RED_WHITE_IMAGE;
+        bg.style.opacity = "0.65";
     } else {
         bg.style.backgroundImage = DEFAULT_BG_IMAGE;
     }
