@@ -1,11 +1,9 @@
-const DEFAULT_BG_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
-const DEFAULT_BG_COLOR = "#3050aa";
-const BG_BULGARIAN_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(bulgarian).png')";
-const DEFAULT_PT_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
-const DEFAULT_PT_COLOR = "#3050aa";
-const PT_PORTUGUESE_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(portugal)%20(standard).png')";
+const DEFAULT_BG_IMAGE           = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
+const DEFAULT_BG_COLOR           = "#3050aa";
+const BG_BULGARIAN_IMAGE         = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(bulgarian).png')";
+const PT_PORTUGUESE_IMAGE        = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(portugal)%20(standard).png')";
 const PT_PORTUGUESE_MOBILE_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(portugal)%20(mobile).png')";
-const RED_YELLOW_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(red%20and%20yellow).png')";
+const RED_YELLOW_IMAGE           = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(red%20and%20yellow).png')";
 const TRANSLATIONS = {
     en: {
         subtitle:    "Guess the 5-digit number!",
@@ -21,40 +19,40 @@ const TRANSLATIONS = {
         closeBtn:    "\u2715 Close"
     },
     pt: {
-        subtitle:    "Adivinhe o número de 5 dígitos!",
-        placeholder: "Escreve 5 números",
+        subtitle:    "Adivinhe o n\u00famero de 5 d\u00edgitos!",
+        placeholder: "Escreve 5 n\u00fameros",
         guessBtn:    "Adivinhar",
-        retryBtn:    "Recomeçar",
-        empty:       "Não escrevas um espaço vazio.",
-        invalid:     "Escreva exatamente 5 números.",
+        retryBtn:    "Recome\u00e7ar",
+        empty:       "N\u00e3o escrevas um espa\u00e7o vazio.",
+        invalid:     "Escreva exatamente 5 n\u00fameros.",
         win:         "Ganhaste!",
-        gameover:    "Fim do jogo! O número era: ",
+        gameover:    "Fim do jogo! O n\u00famero era: ",
         langBtn:     "Idioma",
         chooseLang:  "Escolher Idioma",
         closeBtn:    "\u2715 Fechar"
     },
     es: {
-        subtitle:    "¡Adivina el numero de 5 digitos!",
-        placeholder: "Escribe 5 números",
+        subtitle:    "\u00a1Adivina el numero de 5 digitos!",
+        placeholder: "Escribe 5 n\u00fameros",
         guessBtn:    "Adivinar",
         retryBtn:    "Reintentar",
-        empty:       "No dejes el espacio vacío.",
-        invalid:     "Escribe exactamente 5 números.",
-        win:         "¡Ganaste!",
-        gameover:    "Juego terminado! El número era: ",
+        empty:       "No dejes el espacio vac\u00edo.",
+        invalid:     "Escribe exactamente 5 n\u00fameros.",
+        win:         "\u00a1Ganaste!",
+        gameover:    "Juego terminado! El n\u00famero era: ",
         langBtn:     "Idioma",
         chooseLang:  "Elegir Idioma",
         closeBtn:    "\u2715 Cerrar"
     },
     fr: {
-        subtitle:    "Devinez le nombre à 5 chiffres!",
+        subtitle:    "Devinez le nombre \u00e0 5 chiffres!",
         placeholder: "Saisir 5 chiffres",
         guessBtn:    "Deviner",
-        retryBtn:    "Réessayer",
+        retryBtn:    "R\u00e9essayer",
         empty:       "Ne laissez pas le champ vide.",
         invalid:     "Entrez exactement 5 chiffres.",
-        win:         "Vous avez gagne!",
-        gameover:    "Partie terminé! Le nombre était: ",
+        win:         "Vous avez gagn\u00e9!",
+        gameover:    "Partie termin\u00e9e! Le nombre \u00e9tait: ",
         langBtn:     "Langue",
         chooseLang:  "Choisir la Langue",
         closeBtn:    "\u2715 Fermer"
@@ -69,8 +67,8 @@ const TRANSLATIONS = {
         win:         "Du hast gewonnen!",
         gameover:    "Spiel vorbei! Die Zahl war: ",
         langBtn:     "Sprache",
-        chooseLang:  "Sprache wahlen",
-        closeBtn:    "\u2715 Schließen"
+        chooseLang:  "Sprache w\u00e4hlen",
+        closeBtn:    "\u2715 Schlie\u00dfen"
     },
     it: {
         subtitle:    "Indovina il numero a 5 cifre!",
@@ -102,40 +100,41 @@ const TRANSLATIONS = {
         subtitle:    "Zgadnij 5-cyfrow\u0105 liczb\u0119!",
         placeholder: "Wpisz 5 cyfr",
         guessBtn:    "Zgadnij",
-        retryBtn:    "Sprobuj ponownie",
+        retryBtn:    "Spr\u00f3buj ponownie",
         empty:       "Nie wpisuj pustego pola.",
         invalid:     "Wpisz dok\u0142adnie 5 cyfr.",
         win:         "Wygra\u0142e\u015b!",
         gameover:    "Koniec gry! Liczba to: ",
         langBtn:     "J\u0119zyk",
+        chooseLang:  "Wybierz J\u0119zyk",
         closeBtn:    "\u2715 Zamknij"
     },
-	bg: {
-		subtitle:    "Познай 5-цифреното число!",
-		placeholder: "Въведете 5 числа",
-		guessBtn:    "Познайте",
-		retryBtn:    "Опитайте отново",
-		empty:       "Не влизайте в празно пространство.",
-		invalid:     "Въведете точно 5 числа.",
-		win:         "Вие печелите!",
-		gameover:    "Край на играта! Номерът беше: ",
-		langBtn:     "Език",
-		chooseLang:  "Изберете език",
-		closeBtn:    "\u2715 Затворете",
-	},
-	ru: {
-		subtitle:    "Угадайте пятизначное число!",
-		placeholder: "Введите 5 цифр",
-		guessBtn:    "Угадайте",
-		retryBtn:    "Повторить попытку",
-		empty:       "Не заходите в пустое пространство.",
-		invalid:     "Введите ровно 5 чисел.",
-		win:         "Пожалуйста, введите ровно 5 чисел.",
-		gameover:    "Игра окончена! Число было:",
-		langBtn:     "Язык",
-		chooseLang:  "Выберите язык",
-		closeBtn:    "\u2715 Закрывать",
-	},
+    bg: {
+        subtitle:    "\u041f\u043e\u0437\u043d\u0430\u0439 5-\u0446\u0438\u0444\u0440\u0435\u043d\u043e\u0442\u043e \u0447\u0438\u0441\u043b\u043e!",
+        placeholder: "\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 5 \u0447\u0438\u0441\u043b\u0430",
+        guessBtn:    "\u041f\u043e\u0437\u043d\u0430\u0439\u0442\u0435",
+        retryBtn:    "\u041e\u043f\u0438\u0442\u0430\u0439\u0442\u0435 \u043e\u0442\u043d\u043e\u0432\u043e",
+        empty:       "\u041d\u0435 \u0432\u043b\u0438\u0437\u0430\u0439\u0442\u0435 \u0432 \u043f\u0440\u0430\u0437\u043d\u043e \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e.",
+        invalid:     "\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0442\u043e\u0447\u043d\u043e 5 \u0447\u0438\u0441\u043b\u0430.",
+        win:         "\u0412\u0438\u0435 \u043f\u0435\u0447\u0435\u043b\u0438\u0442\u0435!",
+        gameover:    "\u041a\u0440\u0430\u0439 \u043d\u0430 \u0438\u0433\u0440\u0430\u0442\u0430! \u041d\u043e\u043c\u0435\u0440\u044a\u0442 \u0431\u0435\u0448\u0435: ",
+        langBtn:     "\u0415\u0437\u0438\u043a",
+        chooseLang:  "\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0435\u0437\u0438\u043a",
+        closeBtn:    "\u2715 \u0417\u0430\u0442\u0432\u043e\u0440\u0435\u0442\u0435"
+    },
+    ru: {
+        subtitle:    "\u0423\u0433\u0430\u0434\u0430\u0439\u0442\u0435 \u043f\u044f\u0442\u0438\u0437\u043d\u0430\u0447\u043d\u043e\u0435 \u0447\u0438\u0441\u043b\u043e!",
+        placeholder: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 5 \u0446\u0438\u0444\u0440",
+        guessBtn:    "\u0423\u0433\u0430\u0434\u0430\u0442\u044c",
+        retryBtn:    "\u041f\u043e\u0432\u0442\u043e\u0440\u0438\u0442\u044c",
+        empty:       "\u041d\u0435 \u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u043f\u043e\u043b\u0435 \u043f\u0443\u0441\u0442\u044b\u043c.",
+        invalid:     "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0440\u043e\u0432\u043d\u043e 5 \u0446\u0438\u0444\u0440.",
+        win:         "\u0412\u044b \u0432\u044b\u0438\u0433\u0440\u0430\u043b\u0438!",
+        gameover:    "\u0418\u0433\u0440\u0430 \u043e\u043a\u043e\u043d\u0447\u0435\u043d\u0430! \u0427\u0438\u0441\u043b\u043e \u0431\u044b\u043b\u043e: ",
+        langBtn:     "\u042f\u0437\u044b\u043a",
+        chooseLang:  "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u044f\u0437\u044b\u043a",
+        closeBtn:    "\u2715 \u0417\u0430\u043a\u0440\u044b\u0442\u044c"
+    },
     ja: {
         subtitle:    "5\u684c\u306e\u6570\u5b57\u3092\u5f53\u3066\u3088\u3046\uff01",
         placeholder: "\u6570\u5b57\u30925\u3064\u5165\u529b",
@@ -146,7 +145,8 @@ const TRANSLATIONS = {
         win:         "\u6b63\u89e3\uff01",
         gameover:    "\u30b2\u30fc\u30e0\u30aa\u30fc\u30d0\u30fc\uff01\u6b63\u89e3\u306f: ",
         langBtn:     "\u8a00\u8a9e",
-        closeBtn:    "\u2715"
+        chooseLang:  "\u8a00\u8a9e\u3092\u9078\u629e",
+        closeBtn:    "\u2715 \u9589\u3058\u308b"
     },
     zh: {
         subtitle:    "\u731c\u51fa5\u4f4d\u6570\u5b57\uff01",
@@ -158,53 +158,53 @@ const TRANSLATIONS = {
         win:         "\u4f60\u8d62\u4e86\uff01",
         gameover:    "\u6e38\u620f\u7ed3\u675f\uff01\u7b54\u6848\u662f: ",
         langBtn:     "\u8bed\u8a00",
-        closeBtn:    "\u2715"
+        chooseLang:  "\u9009\u62e9\u8bed\u8a00",
+        closeBtn:    "\u2715 \u5173\u95ed"
     }
 };
 const LANG_LIST = [
-    { code: "en", flag: "🇬🇧", name: "English" },
-    { code: "pt", flag: "🇵🇹", name: "Português" },
-    { code: "es", flag: "🇪🇸", name: "Español" },
-    { code: "fr", flag: "🇫🇷", name: "Français" },
-    { code: "de", flag: "🇩🇪", name: "Deutsch" },
-    { code: "it", flag: "🇮🇹", name: "Italiano" },
+    { code: "en", flag: "🇬🇧", name: "English"    },
+    { code: "pt", flag: "🇵🇹", name: "Portugu\u00eas" },
+    { code: "es", flag: "🇪🇸", name: "Espa\u00f1ol"   },
+    { code: "fr", flag: "🇫🇷", name: "Fran\u00e7ais"  },
+    { code: "de", flag: "🇩🇪", name: "Deutsch"    },
+    { code: "it", flag: "🇮🇹", name: "Italiano"   },
     { code: "nl", flag: "🇳🇱", name: "Nederlands" },
-    { code: "pl", flag: "🇵🇱", name: "Polski" },
-	{ code: "bg", flag: "🇧🇬", name: "Български"},
-	{ code: "ru", flag: "🇷🇺", name: "Русский"},
-    { code: "ja", flag: "🇯🇵", name: "日本語" },
-    { code: "zh", flag: "🇨🇳", name: "中文" }
+    { code: "pl", flag: "🇵🇱", name: "Polski"     },
+    { code: "bg", flag: "🇧🇬", name: "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438" },
+    { code: "ru", flag: "🇷🇺", name: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439" },
+    { code: "ja", flag: "🇯🇵", name: "\u65e5\u672c\u8a9e" },
+    { code: "zh", flag: "🇨🇳", name: "\u4e2d\u6587" }
 ];
 let currentLang = "en";
 function applyBackground(code) {
-	const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const bg = document.getElementById("bgLayer");
     if (code === "bg") {
-        document.body.style.backgroundImage = BG_BULGARIAN_IMAGE;
-	} else if (code === "pt") {
-		document.body.style.backgroundImage = isMobile
+        bg.style.backgroundImage = BG_BULGARIAN_IMAGE;
+    } else if (code === "pt") {
+        bg.style.backgroundImage = isMobile
             ? PT_PORTUGUESE_MOBILE_IMAGE
             : PT_PORTUGUESE_IMAGE;
     } else if (code === "zh") {
-		document.body.style.backgroundImage = RED_YELLOW_IMAGE;
-	} else {
-        document.body.style.backgroundImage = DEFAULT_BG_IMAGE;
+        bg.style.backgroundImage = RED_YELLOW_IMAGE;
+    } else {
+        bg.style.backgroundImage = DEFAULT_BG_IMAGE;
     }
-    document.body.style.backgroundColor = DEFAULT_BG_COLOR;
 }
 window.matchMedia("(max-width: 768px)").addEventListener("change", () => applyBackground(currentLang));
 function applyLang(code) {
     currentLang = code;
     const t = TRANSLATIONS[code];
-    document.getElementById("subtitle").textContent = t.subtitle;
-    document.getElementById("guessInput").placeholder = t.placeholder;
-    document.getElementById("guessBtn").textContent = t.guessBtn;
-    document.getElementById("restartBtn").textContent = t.retryBtn;
-    document.getElementById("langBtn").textContent = t.langBtn;
-    document.getElementById("chooseLang").textContent = t.chooseLang;
-    document.getElementById("close").textContent = t.closeBtn;
-    buildLangMenuItems();
-    const messageEl = document.getElementById("message");
+    document.getElementById("subtitle").textContent      = t.subtitle;
+    document.getElementById("guessInput").placeholder    = t.placeholder;
+    document.getElementById("guessBtn").textContent      = t.guessBtn;
+    document.getElementById("restartBtn").textContent    = t.retryBtn;
+    document.getElementById("langBtn").textContent       = t.langBtn;
+    document.getElementById("chooseLang").textContent    = t.chooseLang;
+    document.getElementById("close").textContent         = t.closeBtn;
     applyBackground(code);
+    const messageEl = document.getElementById("message");
     if (gameState === "win") {
         messageEl.textContent = t.win;
     } else if (gameState === "gameover") {
@@ -233,9 +233,6 @@ function selectLang(code) {
     applyLang(code);
     closeLangMenu();
 }
-document.getElementById("langOverlay").addEventListener("click", function(e) {
-    if (e.target === this) closeLangMenu();
-});
 document.getElementById("langBtn").addEventListener("click", openLangMenu);
 function generateNumber() {
     let num = "";
@@ -244,10 +241,10 @@ function generateNumber() {
     }
     return num;
 }
-let answer = generateNumber();
+let answer     = generateNumber();
 let currentRow = 0;
-let gameState = null;
-const board = document.getElementById("board");
+let gameState  = null;
+const board    = document.getElementById("board");
 for (let i = 0; i < 6; i++) {
     const row = document.createElement("div");
     row.classList.add("row");
@@ -258,30 +255,27 @@ for (let i = 0; i < 6; i++) {
     }
     board.appendChild(row);
 }
-
 function submitGuess() {
-    const input = document.getElementById("guessInput");
+    const input     = document.getElementById("guessInput");
     const messageEl = document.getElementById("message");
-    const t = TRANSLATIONS[currentLang];
-    const guess = input.value;
+    const t         = TRANSLATIONS[currentLang];
+    const guess     = input.value;
     if (!/^\d{5}$/.test(guess)) {
         messageEl.textContent = guess === "" ? t.empty : t.invalid;
-        setTimeout(() => {
-            messageEl.textContent = "";
-        }, 2000);
+        setTimeout(() => { messageEl.textContent = ""; }, 2000);
         input.value = "";
         return;
     }
     if (currentRow >= 6) return;
-    const row = board.children[currentRow].children;
+    const row     = board.children[currentRow].children;
     let answerArr = answer.split("");
-    let guessArr = guess.split("");
+    let guessArr  = guess.split("");
     for (let i = 0; i < 5; i++) {
         row[i].textContent = guess[i];
         if (guess[i] === answer[i]) {
             row[i].classList.add("correct");
             answerArr[i] = null;
-            guessArr[i] = null;
+            guessArr[i]  = null;
         }
     }
     for (let i = 0; i < 5; i++) {
@@ -296,26 +290,26 @@ function submitGuess() {
         }
     }
     if (guess === answer) {
-        gameState = 'win';
+        gameState = "win";
         messageEl.textContent = t.win;
         document.getElementById("restartBtn").style.display = "inline-block";
-        document.getElementById("guessBtn").style.display = "none";
-	       input.value = "";
+        document.getElementById("guessBtn").style.display   = "none";
+        input.value = "";
         return;
     }
     currentRow++;
     input.value = "";
     if (currentRow === 6) {
-        gameState = 'gameover';
+        gameState = "gameover";
         messageEl.textContent = t.gameover + answer;
         document.getElementById("restartBtn").style.display = "inline-block";
-        document.getElementById("guessBtn").style.display = "none";
+        document.getElementById("guessBtn").style.display   = "none";
     }
 }
-console.log("Answer:", answer);
 function restartGame() {
-    answer = generateNumber();
+    answer     = generateNumber();
     currentRow = 0;
+    gameState  = null;
     for (let i = 0; i < 6; i++) {
         const row = board.children[i].children;
         for (let j = 0; j < 5; j++) {
@@ -323,11 +317,10 @@ function restartGame() {
             row[j].classList.remove("correct", "present", "absent");
         }
     }
-    gameState = null;
-    document.getElementById("guessInput").value = "";
+    document.getElementById("guessInput").value    = "";
     document.getElementById("message").textContent = "";
     document.getElementById("restartBtn").style.display = "none";
-    document.getElementById("guessBtn").style.display = "inline-block";
+    document.getElementById("guessBtn").style.display   = "inline-block";
     console.log("New Answer:", answer);
 }
 const guessInput = document.getElementById("guessInput");
