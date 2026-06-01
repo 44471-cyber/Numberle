@@ -180,14 +180,16 @@ let currentLang = "en";
 function applyBackground(code) {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     const bg = document.getElementById("bgLayer");
+    zh.style.opacity = "1";
     if (code === "bg") {
         bg.style.backgroundImage = BG_BULGARIAN_IMAGE;
     } else if (code === "pt") {
-        bg.style.backgroundImage = isMobile
+        pt.style.backgroundImage = isMobile
             ? PT_PORTUGUESE_MOBILE_IMAGE
             : PT_PORTUGUESE_IMAGE;
     } else if (code === "zh") {
-        bg.style.backgroundImage = RED_YELLOW_IMAGE;
+        zh.style.backgroundImage = RED_YELLOW_IMAGE;
+        zh.style.opacity = "0.65";
     } else {
         bg.style.backgroundImage = DEFAULT_BG_IMAGE;
     }
