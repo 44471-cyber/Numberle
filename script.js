@@ -15,7 +15,7 @@ const TRANSLATIONS = {
         win:         "You win!",
         gameover:    "Game Over! Number was: ",
         langBtn:     "Language",
-        chooseLang:  "Choose Language",
+        chooseLang:  "Choose a Language",
         closeBtn:    "\u2715 Close"
     },
     pt: {
@@ -28,7 +28,7 @@ const TRANSLATIONS = {
         win:         "Ganhaste!",
         gameover:    "Fim do jogo! O n\u00famero era: ",
         langBtn:     "Idioma",
-        chooseLang:  "Escolher Idioma",
+        chooseLang:  "Escolha um Idioma",
         closeBtn:    "\u2715 Fechar"
     },
     es: {
@@ -41,7 +41,7 @@ const TRANSLATIONS = {
         win:         "\u00a1Ganaste!",
         gameover:    "Juego terminado! El n\u00famero era: ",
         langBtn:     "Idioma",
-        chooseLang:  "Elegir Idioma",
+        chooseLang:  "Elege un Idioma",
         closeBtn:    "\u2715 Cerrar"
     },
     fr: {
@@ -54,7 +54,7 @@ const TRANSLATIONS = {
         win:         "Vous avez gagn\u00e9!",
         gameover:    "Partie termin\u00e9e! Le nombre \u00e9tait: ",
         langBtn:     "Langue",
-        chooseLang:  "Choisir la Langue",
+        chooseLang:  "Choisissez une langue",
         closeBtn:    "\u2715 Fermer"
     },
     de: {
@@ -135,6 +135,19 @@ const TRANSLATIONS = {
         chooseLang:  "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u044f\u0437\u044b\u043a",
         closeBtn:    "\u2715 \u0417\u0430\u043a\u0440\u044b\u0442\u044c"
     },
+    vn: {
+        subtitle:    "\u0110o\u00e1n xem \u0111\u00f3 l\u00e1 s\u1ed1 c\u00f3 5 ch\u1eef s\u1ed1!",
+        placeholder: "Nh\u1eadp 5 s\u1ed1",
+        guessBtn:    "\u0110o\u00e1n",
+        retryBtn:    "Th\u1eed l\u1ea1i",
+        empty:       "Kh\u00f4ng \u0111\u01b0\u1ee3 \u0111i v\u00e0o kho\u1ea3ng tr\u1ed1ng",
+        invalid:     "Nh\u1eadp ch\u00ednh x\u00e1c",
+        win:         "B\u1ea1n th\u1eafng!",
+        gameover:    "Tr\u00f2 ch\u01a1i k\u1ebft th\u00fac!",
+        langBtn:     "Ng\u00f4n ng\u1eef",
+        chooseLang:  "Ch\u1ecdn m\u1ed9t ng\u00f4n ng\u1eef",
+        closeBtn:    "\u2715 \u0110\u00f3ng"
+    },
     ja: {
         subtitle:    "5\u684c\u306e\u6570\u5b57\u3092\u5f53\u3066\u3088\u3046\uff01",
         placeholder: "\u6570\u5b57\u30925\u3064\u5165\u529b",
@@ -173,6 +186,7 @@ const LANG_LIST = [
     { code: "pl", flag: "🇵🇱", name: "Polski"     },
     { code: "bg", flag: "🇧🇬", name: "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438" },
     { code: "ru", flag: "🇷🇺", name: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439" },
+    { code: "vn", flag: "🇻🇳", name: "Ti\u1ebfng Vi\u1ec7t"},
     { code: "ja", flag: "🇯🇵", name: "\u65e5\u672c\u8a9e" },
     { code: "zh", flag: "🇨🇳", name: "\u4e2d\u6587" }
 ];
@@ -187,7 +201,7 @@ function applyBackground(code) {
         bg.style.backgroundImage = isMobile
             ? PT_PORTUGUESE_MOBILE_IMAGE
             : PT_PORTUGUESE_IMAGE;
-    } else if (code === "zh") {
+    } else if (code === "zh" || code === "vn") {
         bg.style.backgroundImage = RED_YELLOW_IMAGE;
         bg.style.opacity = "0.65";
     } else {
