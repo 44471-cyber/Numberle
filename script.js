@@ -5,6 +5,7 @@ const DEFAULT_PT_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Num
 const DEFAULT_PT_COLOR = "#3050aa";
 const PT_PORTUGUESE_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(portugal)%20(standard).png')";
 const PT_PORTUGUESE_MOBILE_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(portugal)%20(mobile).png')";
+const RED_YELLOW_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(red%20and%20yellow).png')";
 const TRANSLATIONS = {
     en: {
         subtitle:    "Guess the 5-digit number!",
@@ -183,7 +184,9 @@ function applyBackground(code) {
 		document.body.style.backgroundImage = isMobile
             ? PT_PORTUGUESE_MOBILE_IMAGE
             : PT_PORTUGUESE_IMAGE;
-    } else {
+    } else if (code === "zh") {
+		document.body.style.backgroundImage = RED_YELLOW_IMAGE;
+	} else {
         document.body.style.backgroundImage = DEFAULT_BG_IMAGE;
     }
     document.body.style.backgroundColor = DEFAULT_BG_COLOR;
