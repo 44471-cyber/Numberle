@@ -149,7 +149,7 @@ const TRANSLATIONS = {
         chooseLang:  "Ch\u1ecdn m\u1ed9t ng\u00f4n ng\u1eef",
         closeBtn:    "\u2715 \u0110\u00f3ng"
     },
-    ja: {
+    jp: {
         subtitle:    "5\u684c\u306e\u6570\u5b57\u3092\u5f53\u3066\u3088\u3046\uff01",
         placeholder: "\u6570\u5b57\u30925\u3064\u5165\u529b",
         guessBtn:    "\u63a8\u6e2c",
@@ -161,6 +161,19 @@ const TRANSLATIONS = {
         langBtn:     "\u8a00\u8a9e",
         chooseLang:  "\u8a00\u8a9e\u3092\u9078\u629e",
         closeBtn:    "\u2715 \u9589\u3058\u308b"
+    },
+    kr: {
+        subtitle:    "\ub2e4\uc12f \uc790\ub9ac \uc22b\uc790\ub97c \ub9de\ucdb0\ubcf4\uc138\uc694!",
+        placeholder: "\uc22b\uc790 5\uac1c\ub97c \uc785\ub825\ud558\uc138\uc694",
+        guessBtn:    "\ucd94\uce21\ud558\ub2e4",
+        retryBtn:    "\ub2e4\uc2dc \ud574\ubcf4\ub2e4",
+        empty:       "\ube44 \uacf5\uac01\uc5d0 \ub4f1\uc5b4\uac00\uc9c0 \ub9c8\uc2ec\uc2dc\uc624.",
+        invalid:     "\uc815\ud655\ud76c 5\uac1c\uc758 \uc22b\uc790\ub974 \uc785\ub825\ud558\uc138\uc694.",
+        win:         "\ub2f4\uc2ed\uc774 \uae37\uc5b4\uc694!",
+        gameover:    "\uac0c\uc784 \uc185\ubcc0! \uc22b\uc790\ub294 \ub2e4\uc74c\uacfc \uac19\uc2b5\ub2c8\ub2e4: ",
+        langBtn:     "\uc5b8\uc5b4",
+        chooseLang:  "\uc5b8\uc5b4\ub97c \uc120\ud0dd\ud558\uc138\uc694",
+        closeBtn:    "\u2715 \ub2eb\ub2e4"
     },
     zh: {
         subtitle:    "\u731c\u51fa5\u4f4d\u6570\u5b57\uff01",
@@ -188,7 +201,8 @@ const LANG_LIST = [
     { code: "bg", flag: "🇧🇬", name: "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438" },
     { code: "ru", flag: "🇷🇺", name: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439" },
     { code: "vn", flag: "🇻🇳", name: "Ti\u1ebfng Vi\u1ec7t"},
-    { code: "ja", flag: "🇯🇵", name: "\u65e5\u672c\u8a9e" },
+    { code: "jp", flag: "🇯🇵", name: "\u65e5\u672c\u8a9e" },
+    { code: "kr", flag: "🇰🇷", name: "\ud55c\uad6d\uc778"},
     { code: "zh", flag: "🇨🇳", name: "\u4e2d\u6587" }
 ];
 let currentLang = "en";
@@ -205,7 +219,7 @@ function applyBackground(code) {
     } else if (code === "zh" || code === "vn") {
         bg.style.backgroundImage = RED_YELLOW_IMAGE;
         bg.style.opacity = "0.65";
-    } else if (code === "ja") {
+    } else if (code === "jp") {
         bg.style.backgroundImage = RED_WHITE_IMAGE;
         bg.style.opacity = "0.65";
     } else {
