@@ -5,6 +5,7 @@ const PT_PORTUGUESE_IMAGE        = "url('https://raw.githubusercontent.com/44471
 const PT_PORTUGUESE_MOBILE_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(portugal)%20(mobile).png')";
 const RED_YELLOW_IMAGE           = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(red%20and%20yellow).png')";
 const RED_WHITE_IMAGE            = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(red%20and%20white).png')";
+const KR_KOREAN_IMAGE            = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(korean).png')";
 const TRANSLATIONS = {
     en: {
         subtitle:    "Guess the 5-digit number!",
@@ -222,6 +223,8 @@ function applyBackground(code) {
     } else if (code === "jp") {
         bg.style.backgroundImage = RED_WHITE_IMAGE;
         bg.style.opacity = "0.65";
+    } else if (code === "kr") {
+        bg.style.backgroundImage = KR_KOREAN_IMAGE;
     } else {
         bg.style.backgroundImage = DEFAULT_BG_IMAGE;
     }
