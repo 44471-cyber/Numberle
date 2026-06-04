@@ -22,7 +22,7 @@ const TRANSLATIONS = {
     },
     pt: {
         subtitle:    "Adivinhe o n\u00famero de 5 d\u00edgitos!",
-        placeholder: "Escreve 5 n\u00fameros",
+        placeholder: "Escreva 5 n\u00fameros",
         guessBtn:    "Adivinhar",
         retryBtn:    "Recome\u00e7ar",
         empty:       "N\u00e3o escrevas um espa\u00e7o vazio.",
