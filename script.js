@@ -225,6 +225,7 @@ function applyBackground(code) {
         bg.style.opacity = "0.65";
     } else if (code === "kr") {
         bg.style.backgroundImage = KR_KOREAN_IMAGE;
+        bg.style.opacity = "0.65";
     } else {
         bg.style.backgroundImage = DEFAULT_BG_IMAGE;
     }
