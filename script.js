@@ -19,7 +19,9 @@ const TRANSLATIONS = {
         gameover:    "Game Over! Number was: ",
         langBtn:     "Language",
         chooseLang:  "Choose a Language",
-        closeBtn:    "\u2715 Close"
+        closeBtn:    "\u2715 Close",
+        darkBtn:     "Dark mode",
+        lightBtn:    "Light mode"
     },
     pt: {
         subtitle:    "Adivinhe o n\u00famero de 5 d\u00edgitos!",
@@ -32,7 +34,9 @@ const TRANSLATIONS = {
         gameover:    "Fim do jogo! O n\u00famero era: ",
         langBtn:     "Idioma",
         chooseLang:  "Escolha um Idioma",
-        closeBtn:    "\u2715 Fechar"
+        closeBtn:    "\u2715 Fechar",
+        darkBtn:     "Modo escuro",
+        lightBtn:    "Modo claro"
     },
     es: {
         subtitle:    "\u00a1Adivina el numero de 5 digitos!",
@@ -45,7 +49,9 @@ const TRANSLATIONS = {
         gameover:    "Juego terminado! El n\u00famero era: ",
         langBtn:     "Idioma",
         chooseLang:  "Elege un Idioma",
-        closeBtn:    "\u2715 Cerrar"
+        closeBtn:    "\u2715 Cerrar",
+        darkBtn:     "Modo oscuro",
+        lightBtn:    "Modo de luz"
     },
     fr: {
         subtitle:    "Devinez le nombre \u00e0 5 chiffres!",
@@ -58,7 +64,9 @@ const TRANSLATIONS = {
         gameover:    "Partie termin\u00e9e! Le nombre \u00e9tait: ",
         langBtn:     "Langue",
         chooseLang:  "Choisissez une langue",
-        closeBtn:    "\u2715 Fermer"
+        closeBtn:    "\u2715 Fermer",
+        darkBtn:     "Mode sombre",
+        lightBtn:    "Mode lumi\u00e8re"
     },
     de: {
         subtitle:    "Errate die 5-stellige Zahl!",
@@ -71,7 +79,9 @@ const TRANSLATIONS = {
         gameover:    "Spiel vorbei! Die Zahl war: ",
         langBtn:     "Sprache",
         chooseLang:  "Sprache w\u00e4hlen",
-        closeBtn:    "\u2715 Schlie\u00dfen"
+        closeBtn:    "\u2715 Schlie\u00dfen",
+        darkBtn:     "Dunkler modus",
+        lightBtn:    "Licht modus"
     },
     it: {
         subtitle:    "Indovina il numero a 5 cifre!",
@@ -84,7 +94,9 @@ const TRANSLATIONS = {
         gameover:    "Partita finita! Il numero era: ",
         langBtn:     "Lingua",
         chooseLang:  "Scegli Lingua",
-        closeBtn:    "\u2715 Chiudi"
+        closeBtn:    "\u2715 Chiudi",
+        darkBtn:     "Modalit\u00e0 oscura",
+        lightBtn:    "Modalit\u00e0 luce"
     },
     nl: {
         subtitle:    "Raad het 5-cijferige getal!",
@@ -97,7 +109,9 @@ const TRANSLATIONS = {
         gameover:    "Game over! Het getal was: ",
         langBtn:     "Taal",
         chooseLang:  "Kies Taal",
-        closeBtn:    "\u2715 Sluiten"
+        closeBtn:    "\u2715 Sluiten",
+        darkBtn:     "Donkere modus",
+        lightBtn:    "Lichte modus"
     },
     pl: {
         subtitle:    "Zgadnij 5-cyfrow\u0105 liczb\u0119!",
@@ -110,7 +124,9 @@ const TRANSLATIONS = {
         gameover:    "Koniec gry! Liczba to: ",
         langBtn:     "J\u0119zyk",
         chooseLang:  "Wybierz J\u0119zyk",
-        closeBtn:    "\u2715 Zamknij"
+        closeBtn:    "\u2715 Zamknij",
+        darkBtn:     "Dark Mode",
+        lightBtn:    "Light Mode"
     },
     bg: {
         subtitle:    "\u041f\u043e\u0437\u043d\u0430\u0439 5-\u0446\u0438\u0444\u0440\u0435\u043d\u043e\u0442\u043e \u0447\u0438\u0441\u043b\u043e!",
@@ -123,7 +139,9 @@ const TRANSLATIONS = {
         gameover:    "\u041a\u0440\u0430\u0439 \u043d\u0430 \u0438\u0433\u0440\u0430\u0442\u0430! \u041d\u043e\u043c\u0435\u0440\u044a\u0442 \u0431\u0435\u0448\u0435: ",
         langBtn:     "\u0415\u0437\u0438\u043a",
         chooseLang:  "\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0435\u0437\u0438\u043a",
-        closeBtn:    "\u2715 \u0417\u0430\u0442\u0432\u043e\u0440\u0435\u0442\u0435"
+        closeBtn:    "\u2715 \u0417\u0430\u0442\u0432\u043e\u0440\u0435\u0442\u0435",
+        darkBtn:     "\u0422\u044a\u043c\u0435\u043d \u0440\u0435\u0436\u0438\u043c",
+        lightBtn:    "\u041b\u0435\u043a \u0440\u0435\u0436\u0438\u043c"
     },
     ru: {
         subtitle:    "\u0423\u0433\u0430\u0434\u0430\u0439\u0442\u0435 \u043f\u044f\u0442\u0438\u0437\u043d\u0430\u0447\u043d\u043e\u0435 \u0447\u0438\u0441\u043b\u043e!",
@@ -136,7 +154,9 @@ const TRANSLATIONS = {
         gameover:    "\u0418\u0433\u0440\u0430 \u043e\u043a\u043e\u043d\u0447\u0435\u043d\u0430! \u0427\u0438\u0441\u043b\u043e \u0431\u044b\u043b\u043e: ",
         langBtn:     "\u042f\u0437\u044b\u043a",
         chooseLang:  "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u044f\u0437\u044b\u043a",
-        closeBtn:    "\u2715 \u0417\u0430\u043a\u0440\u044b\u0442\u044c"
+        closeBtn:    "\u2715 \u0417\u0430\u043a\u0440\u044b\u0442\u044c",
+        darkBtn:     "\u0422\u0435\u043c\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c",
+        lightBtn:    "\u0421\u0432\u0435\u0442\u043b\u044b\u0439 \u0440\u0435\u0436\u0438\u043c"
     },
     vn: {
         subtitle:    "\u0110o\u00e1n xem \u0111\u00f3 l\u00e1 s\u1ed1 c\u00f3 5 ch\u1eef s\u1ed1!",
@@ -149,7 +169,9 @@ const TRANSLATIONS = {
         gameover:    "Tr\u00f2 ch\u01a1i k\u1ebft th\u00fac!",
         langBtn:     "Ng\u00f4n ng\u1eef",
         chooseLang:  "Ch\u1ecdn m\u1ed9t ng\u00f4n ng\u1eef",
-        closeBtn:    "\u2715 \u0110\u00f3ng"
+        closeBtn:    "\u2715 \u0110\u00f3ng",
+        darkBtn:     "Ch\u1ebf \u0111\u1ed9 t\u1ed1i",
+        lightBtn:    "Ch\u1ebf \u0111\u1ed9 \u00e1nh s\u00e1ng"
     },
     jp: {
         subtitle:    "5\u684c\u306e\u6570\u5b57\u3092\u5f53\u3066\u3088\u3046\uff01",
@@ -162,7 +184,9 @@ const TRANSLATIONS = {
         gameover:    "\u30b2\u30fc\u30e0\u30aa\u30fc\u30d0\u30fc\uff01\u6b63\u89e3\u306f: ",
         langBtn:     "\u8a00\u8a9e",
         chooseLang:  "\u8a00\u8a9e\u3092\u9078\u629e",
-        closeBtn:    "\u2715 \u9589\u3058\u308b"
+        closeBtn:    "\u2715 \u9589\u3058\u308b",
+        darkBtn:     "\u30c0\u30fc\u30af\u30e2\u30fc\u30c9",
+        lightBtn:    "\u30e9\u30a4\u30c8\u30e2\u30fc\u30c9"
     },
     kr: {
         subtitle:    "\ub2e4\uc12f \uc790\ub9ac \uc22b\uc790\ub97c \ub9de\ucdb0\ubcf4\uc138\uc694!",
@@ -175,7 +199,9 @@ const TRANSLATIONS = {
         gameover:    "\uac0c\uc784 \uc185\ubcc0! \uc22b\uc790\ub294 \ub2e4\uc74c\uacfc \uac19\uc2b5\ub2c8\ub2e4: ",
         langBtn:     "\uc5b8\uc5b4",
         chooseLang:  "\uc5b8\uc5b4\ub97c \uc120\ud0dd\ud558\uc138\uc694",
-        closeBtn:    "\u2715 \ub2eb\ub2e4"
+        closeBtn:    "\u2715 \ub2eb\ub2e4",
+        darkBtn:     "\ub2e4\uce74 \ubaa8\ub3c4",
+        lightBtn:    "\ub77c\uc774\ud2b8 \ubaa8\ub3c4"
     },
     zh: {
         subtitle:    "\u731c\u51fa5\u4f4d\u6570\u5b57\uff01",
@@ -188,7 +214,9 @@ const TRANSLATIONS = {
         gameover:    "\u6e38\u620f\u7ed3\u675f\uff01\u7b54\u6848\u662f: ",
         langBtn:     "\u8bed\u8a00",
         chooseLang:  "\u9009\u62e9\u8bed\u8a00",
-        closeBtn:    "\u2715 \u5173\u95ed"
+        closeBtn:    "\u2715 \u5173\u95ed",
+        darkBtn:     "\u6df1\u8272\u6a21\u5f0f",
+        lightBtn:    "\u6d45\u8272\u6a21\u5f0f"
     }
 };
 const LANG_LIST = [
@@ -211,6 +239,27 @@ let currentLang = "en";
 function applyBackground(code) {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     const bg = document.getElementById("bgLayer");
+    function getBgForCode() {
+        if (code === "bg") {
+            bg.style.opacity = "1";
+            return BG_BULGARIAN_IMAGE;
+        } else if (code === "pt") {
+            bg.style.opacity = "1";
+            return isMobile ? PT_PORTUGUESE_MOBILE_IMAGE : PT_PORTUGUESE_IMAGE;
+        } else if (code === "zh" || code === "vn") {
+            bg.style.opacity = "0.65";
+            return RED_YELLOW_IMAGE;
+        } else if (code === "jp") {
+            bg.style.opacity = "0.65";
+            return RED_WHITE_IMAGE;
+        } else if (code === "kr") {
+            bg.style.opacity = "0.65";
+            return KR_KOREAN_IMAGE;
+        } else {
+            bg.style.opacity = "1";
+            return DEFAULT_BG_IMAGE;
+        }
+    }
     bg.style.opacity = "1";
     if (code === "bg") {
         bg.style.backgroundImage = BG_BULGARIAN_IMAGE;
@@ -230,6 +279,16 @@ function applyBackground(code) {
     } else {
         bg.style.backgroundImage = DEFAULT_BG_IMAGE;
     }
+    document.getElementById("darkBtn").onclick = function() {
+        bg.style.backgroundImage = DARK_MODE_IMAGE;
+        document.getElementById("darkBtn").style.display = "none";
+        document.getElementById("lightBtn").style.display = "inline-block";
+    };
+    document.getElementById("lightBtn").onclick = function() {
+        bg.style.backgroundImage = getBgForCode();
+        document.getElementById("darkBtn").style.display = "inline-block";
+        document.getElementById("lightBtn").style.display = "none";
+    };
 }
 window.matchMedia("(max-width: 768px)").addEventListener("change", () => applyBackground(currentLang));
 function applyLang(code) {
@@ -242,6 +301,8 @@ function applyLang(code) {
     document.getElementById("langBtn").textContent       = t.langBtn;
     document.getElementById("chooseLang").textContent    = t.chooseLang;
     document.getElementById("close").textContent         = t.closeBtn;
+    document.getElementById("darkBtn").textContent       = t.darkBtn;
+    document.getElementById("lightBtn").textContent       = t.lightBtn;
     applyBackground(code);
     const messageEl = document.getElementById("message");
     if (gameState === "win") {
@@ -271,23 +332,6 @@ function closeLangMenu() {
 function selectLang(code) {
     applyLang(code);
     closeLangMenu();
-}
-function darkBtn() {
-    const bg = document.getElementById("bgLayer");
-    bg.style.backgroundImage = DARK_MODE_IMAGE;
-    const dark = document.getElementById("darkBtn");
-    dark.style.display = "none";
-    const light = document.getElementById("lightBtn");
-    light.style.display = "inline-block";
-    
-}
-function lightBtn() {
-    const bg = document.getElementById("bgLayer");
-    bg.style.backgroundImage = DEFAULT_BG_IMAGE;
-    const dark = document.getElementById("darkBtn");
-    dark.style.display = "inline-block";
-    const light = document.getElementById("lightBtn");
-    light.style.display = "none";
 }
 document.getElementById("langBtn").addEventListener("click", openLangMenu);
 function generateNumber() {
