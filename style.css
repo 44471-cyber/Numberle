@@ -112,6 +112,30 @@ button:hover {
     background-color: #1556aa;
     border-color: #051c3b;
 }
+#separate {
+    display: inline-flex;
+    gap: 14px;
+}
+#darkBtn {
+    margin: auto;
+    margin-top: 6px;
+    background-color: black;
+    border-color: gray;
+    color: white;
+}
+#darkBtn:hover {
+    background-color: #242424;
+}
+#lightBtn {
+    margin: auto;
+    margin-top: 6px;
+    background-color: white;
+    border-color: gray;
+    color: black;
+}
+#lightBtn:hover {
+    background-color: lightgray;
+}
 .lang-overlay {
     position: fixed;
     inset: 0;
