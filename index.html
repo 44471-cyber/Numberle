@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numberle</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.cdnfonts.com/css/commodore-64" rel="stylesheet">
-    <link rel="icon" type="image/png" href="numberle favicon new.png">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#3050aa">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Numberle">
-    <link rel="apple-touch-icon" href="numberle favicon new.png">
-</head>
-<body>
-    <div id="bgLayer"></div>
-    <h1>Numberle</h1>
-    <p id="subtitle">Guess the 5-digit number!</p>
-    <div id="board"></div>
-    <input id="guessInput" maxlength="5" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Enter 5 numbers" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-    <button id="guessBtn" onclick="submitGuess()">Guess</button>
-    <button id="restartBtn" onclick="restartGame()" style="display:none;">Retry</button>
-    <button id="langBtn">Language</button>
-    <p id="message"></p>
-    <div id="langOverlay" class="lang-overlay" style="display:none;">
-        <div id="langMenu" class="lang-menu">
-            <p id="chooseLang" class="lang-menu-title">Choose Language</p>
-            <div class="lang-menu-grid" id="langMenuGrid"></div>
-            <button id="close" class="lang-close-btn" onclick="closeLangMenu()">&#10005; Close</button>
+    <head>
+        <meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Numberle</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.cdnfonts.com/css/commodore-64" rel="stylesheet">
+        <link rel="icon" type="image/png" href="numberle favicon new.png">
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#3050aa">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Numberle">
+        <link rel="apple-touch-icon" href="numberle favicon new.png">
+    </head>
+    <body>
+        <div id="bgLayer"></div>
+        <h1>Numberle</h1>
+        <p id="subtitle">Guess the 5-digit number!</p>
+        <div id="board"></div>
+        <input id="guessInput" maxlength="5" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Enter 5 numbers" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+        <button id="guessBtn" onclick="submitGuess()">Guess</button>
+        <button id="restartBtn" onclick="restartGame()" style="display:none;">Retry</button>
+        <br>
+        <span id="separate">
+            <button id="langBtn">Language</button>
+            <button id="darkBtn" onclick="darkBtn()">Dark Mode</button>
+            <button id="lightBtn" onclick="lightBtn()" style="display:none;">Light Mode</button>
+        </span>
+        <p id="message"></p>
+        <div id="langOverlay" class="lang-overlay" style="display:none;">
+            <div id="langMenu" class="lang-menu">
+                <p id="chooseLang" class="lang-menu-title">Choose Language</p>
+                <div class="lang-menu-grid" id="langMenuGrid"></div>
+                <button id="close" class="lang-close-btn" onclick="closeLangMenu()">&#10005; Close</button>
+            </div>
         </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
