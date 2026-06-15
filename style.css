@@ -50,7 +50,7 @@ h1 {
 }
 .correct { background-color: #538d4e; }
 .present { background-color: #b59f3b; }
-.absent  { background-color: #3a3a3c; }
+.absent  { background-color: #2b2b2b; }
 #controls {
     display: flex;
     flex-wrap: wrap;
