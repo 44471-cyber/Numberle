@@ -26,13 +26,21 @@
             <button id="langBtn">Language</button>
             <button id="darkBtn">Dark Mode</button>
             <button id="lightBtn" style="display:none;">Light Mode</button>
+            <button id="themeBtn">Color Theme</button>
         </span>
         <p id="message"></p>
         <div id="langOverlay" class="lang-overlay" style="display:none;">
             <div id="langMenu" class="lang-menu">
-                <p id="chooseLang" class="lang-menu-title">Choose Language</p>
+                <p id="chooseLang" class="lang-menu-title">Choose a Language</p>
                 <div class="lang-menu-grid" id="langMenuGrid"></div>
-                <button id="close" class="lang-close-btn" onclick="closeLangMenu()">&#10005; Close</button>
+                <button id="closeLang" class="lang-close-btn" onclick="closeLangMenu()">&#10005; Close</button>
+            </div>
+        </div>
+        <div id="themeOverlay" class="theme-overlay" style="display:none;">
+            <div id="themeMenu" class="theme-menu">
+                <p id="chooseTheme" class="theme-menu-title">Choose a Theme</p>
+                <div class="theme-menu-grid" id="themeMenuGrid"></div>
+                <button id="closeTheme" class="theme-close-btn" onclick="closeThemeMenu()">&#10005; Close</button>
             </div>
         </div>
         <script src="script.js"></script>
