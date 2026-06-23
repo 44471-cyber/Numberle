@@ -5,6 +5,12 @@ body {
     text-align: center;
     background-color: #3050aa;
 }
+:root {
+    --absent-color: #1a3a8f;
+    --present-color: gold;
+    --present-text-color: black;
+    --correct-color: green;
+}
 #bgLayer {
     position: fixed;
     inset: 0;
@@ -48,9 +54,16 @@ h1 {
     align-items: center;
     text-transform: uppercase;
 }
-.correct { background-color: #538d4e; }
-.present { background-color: #b59f3b; }
-.absent  { background-color: #2b2b2b; }
+.correct {
+    background-color: var(--correct-color, #538d4e);
+}
+.present {
+    background-color: var(--present-color, #b59f3b);
+    color: var(--present-text-color, white);
+}
+.absent { 
+    background-color: var(--absent-color, #2b2b2b);
+}
 #controls {
     display: flex;
     flex-wrap: wrap;
@@ -136,6 +149,18 @@ button:hover {
 #lightBtn:hover {
     background-color: lightgray;
 }
+#themeBtn {
+    margin: auto;
+    margin-top: 6px;
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    background-size: 200% auto;
+    border-color: crimson;
+    transition: 100ms;
+}
+#themeBtn:hover {
+    background-position: right center;
+    text-decoration: none;
+}
 .lang-overlay {
     position: fixed;
     inset: 0;
@@ -197,6 +222,70 @@ button:hover {
     transition: 0ms;
 }
 .lang-close-btn:hover {
+    background-color: #555;
+    border-color: white;
+}
+.theme-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.70);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.theme-menu {
+    background-color: #1a1a2e;
+    border: 3px solid white;
+    padding: 20px;
+    max-width: 480px;
+    width: 90%;
+}
+.theme-menu-title {
+    font-family: Monospace;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 0 14px 0;
+    text-align: center;
+}
+.theme-menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.theme-item {
+    background-color: #3050aa;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 10px;
+    font-family: Monospace;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+    transition: 0ms;
+}
+.theme-item:hover {
+    background-color: #1a6fd4;
+    border-color: #00e645;
+}
+.theme-item.active {
+    background-color: #538d4e;
+    border-color: #00e645;
+}
+.theme-close-btn {
+    width: 100%;
+    background-color: #3a3a3c;
+    border-color: #888;
+    color: white;
+    padding: 8px;
+    font-family: Monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0ms;
+}
+.theme-close-btn:hover {
     background-color: #555;
     border-color: white;
 }
