@@ -428,3 +428,4 @@ guessInput.setAttribute("inputmode", "numeric");
 guessInput.addEventListener("input", () => {
     guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
 });
+applyBackground(currentLang);
