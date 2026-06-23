@@ -161,7 +161,7 @@ button:hover {
     background-position: right center;
     text-decoration: none;
 }
-.lang-overlay {
+.lang-overlay, .theme-overlay {
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.70);
@@ -170,14 +170,14 @@ button:hover {
     align-items: center;
     justify-content: center;
 }
-.lang-menu {
+.lang-menu, .theme-menu {
     background-color: #1a1a2e;
     border: 3px solid white;
     padding: 20px;
     max-width: 480px;
     width: 90%;
 }
-.lang-menu-title {
+.lang-menu-title, .theme-menu-title {
     font-family: Monospace;
     font-weight: bold;
     font-size: 1.5rem;
@@ -185,13 +185,13 @@ button:hover {
     margin: 0 0 14px 0;
     text-align: center;
 }
-.lang-menu-grid {
+.lang-menu-grid, .theme-menu-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
     margin-bottom: 12px;
 }
-.lang-item {
+.lang-item, .theme-item {
     background-color: #3050aa;
     color: white;
     border: 2px solid white;
@@ -202,15 +202,15 @@ button:hover {
     text-align: left;
     transition: 0ms;
 }
-.lang-item:hover {
+.lang-item:hover, .theme-item:hover {
     background-color: #1a6fd4;
     border-color: #00e645;
 }
-.lang-item.active {
+.lang-item.active, .theme-item.active {
     background-color: #538d4e;
     border-color: #00e645;
 }
-.lang-close-btn {
+.lang-close-btn, .theme-close-btn {
     width: 100%;
     background-color: #3a3a3c;
     border-color: #888;
@@ -221,71 +221,7 @@ button:hover {
     cursor: pointer;
     transition: 0ms;
 }
-.lang-close-btn:hover {
-    background-color: #555;
-    border-color: white;
-}
-.theme-overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.70);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.theme-menu {
-    background-color: #1a1a2e;
-    border: 3px solid white;
-    padding: 20px;
-    max-width: 480px;
-    width: 90%;
-}
-.theme-menu-title {
-    font-family: Monospace;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: white;
-    margin: 0 0 14px 0;
-    text-align: center;
-}
-.theme-menu-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-.theme-item {
-    background-color: #3050aa;
-    color: white;
-    border: 2px solid white;
-    padding: 8px 10px;
-    font-family: Monospace;
-    font-size: 0.95rem;
-    cursor: pointer;
-    text-align: left;
-    transition: 0ms;
-}
-.theme-item:hover {
-    background-color: #1a6fd4;
-    border-color: #00e645;
-}
-.theme-item.active {
-    background-color: #538d4e;
-    border-color: #00e645;
-}
-.theme-close-btn {
-    width: 100%;
-    background-color: #3a3a3c;
-    border-color: #888;
-    color: white;
-    padding: 8px;
-    font-family: Monospace;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0ms;
-}
-.theme-close-btn:hover {
+.lang-close-btn:hover, .theme-close-btn:hover {
     background-color: #555;
     border-color: white;
 }
