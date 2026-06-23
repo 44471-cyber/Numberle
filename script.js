@@ -20,6 +20,7 @@ const TRANSLATIONS = {
         langBtn:     "Language",
         chooseLang:  "Choose a Language",
         closeBtn:    "\u2715 Close",
+        closeTheme:    "\u2715 Close",
         darkBtn:     "Dark mode",
         lightBtn:    "Light mode"
     },
@@ -35,6 +36,7 @@ const TRANSLATIONS = {
         langBtn:     "Idioma",
         chooseLang:  "Escolha um Idioma",
         closeBtn:    "\u2715 Fechar",
+        closeTheme:    "\u2715 Fechar",
         darkBtn:     "Modo escuro",
         lightBtn:    "Modo claro"
     },
@@ -50,6 +52,7 @@ const TRANSLATIONS = {
         langBtn:     "Idioma",
         chooseLang:  "Elege un Idioma",
         closeBtn:    "\u2715 Cerrar",
+        closeTheme:  "\u2715 Cerrar",
         darkBtn:     "Modo oscuro",
         lightBtn:    "Modo de luz"
     },
@@ -65,6 +68,7 @@ const TRANSLATIONS = {
         langBtn:     "Langue",
         chooseLang:  "Choisissez une langue",
         closeBtn:    "\u2715 Fermer",
+        closeTheme:  "\u2715 Fermer",
         darkBtn:     "Mode sombre",
         lightBtn:    "Mode lumi\u00e8re"
     },
@@ -80,6 +84,7 @@ const TRANSLATIONS = {
         langBtn:     "Sprache",
         chooseLang:  "Sprache w\u00e4hlen",
         closeBtn:    "\u2715 Schlie\u00dfen",
+        closeTheme:  "\u2715 Schlie\u00dfen",
         darkBtn:     "Dunkler modus",
         lightBtn:    "Licht modus"
     },
@@ -95,6 +100,7 @@ const TRANSLATIONS = {
         langBtn:     "Lingua",
         chooseLang:  "Scegli Lingua",
         closeBtn:    "\u2715 Chiudi",
+        closeTheme:  "\u2715 Chiudi",
         darkBtn:     "Modalit\u00e0 oscura",
         lightBtn:    "Modalit\u00e0 luce"
     },
@@ -110,6 +116,7 @@ const TRANSLATIONS = {
         langBtn:     "Taal",
         chooseLang:  "Kies Taal",
         closeBtn:    "\u2715 Sluiten",
+        closeTheme:  "\u2715 Sluiten",
         darkBtn:     "Donkere modus",
         lightBtn:    "Lichte modus"
     },
@@ -125,6 +132,7 @@ const TRANSLATIONS = {
         langBtn:     "J\u0119zyk",
         chooseLang:  "Wybierz J\u0119zyk",
         closeBtn:    "\u2715 Zamknij",
+        closeTheme:  "\u2715 Zamknij",
         darkBtn:     "Dark Mode",
         lightBtn:    "Light Mode"
     },
@@ -140,6 +148,7 @@ const TRANSLATIONS = {
         langBtn:     "\u0415\u0437\u0438\u043a",
         chooseLang:  "\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0435\u0437\u0438\u043a",
         closeBtn:    "\u2715 \u0417\u0430\u0442\u0432\u043e\u0440\u0435\u0442\u0435",
+        closeTheme:  "\u2715 \u0417\u0430\u0442\u0432\u043e\u0440\u0435\u0442\u0435",
         darkBtn:     "\u0422\u044a\u043c\u0435\u043d \u0440\u0435\u0436\u0438\u043c",
         lightBtn:    "\u041b\u0435\u043a \u0440\u0435\u0436\u0438\u043c"
     },
@@ -155,6 +164,7 @@ const TRANSLATIONS = {
         langBtn:     "\u042f\u0437\u044b\u043a",
         chooseLang:  "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u044f\u0437\u044b\u043a",
         closeBtn:    "\u2715 \u0417\u0430\u043a\u0440\u044b\u0442\u044c",
+        closeTheme:  "\u2715 \u0417\u0430\u043a\u0440\u044b\u0442\u044c",
         darkBtn:     "\u0422\u0435\u043c\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c",
         lightBtn:    "\u0421\u0432\u0435\u0442\u043b\u044b\u0439 \u0440\u0435\u0436\u0438\u043c"
     },
@@ -170,6 +180,7 @@ const TRANSLATIONS = {
         langBtn:     "Ng\u00f4n ng\u1eef",
         chooseLang:  "Ch\u1ecdn m\u1ed9t ng\u00f4n ng\u1eef",
         closeBtn:    "\u2715 \u0110\u00f3ng",
+        closeTheme:  "\u2715 \u0110\u00f3ng",
         darkBtn:     "Ch\u1ebf \u0111\u1ed9 t\u1ed1i",
         lightBtn:    "Ch\u1ebf \u0111\u1ed9 \u00e1nh s\u00e1ng"
     },
@@ -185,6 +196,7 @@ const TRANSLATIONS = {
         langBtn:     "\u8a00\u8a9e",
         chooseLang:  "\u8a00\u8a9e\u3092\u9078\u629e",
         closeBtn:    "\u2715 \u9589\u3058\u308b",
+        closeTheme:  "\u2715 \u9589\u3058\u308b",
         darkBtn:     "\u30c0\u30fc\u30af\u30e2\u30fc\u30c9",
         lightBtn:    "\u30e9\u30a4\u30c8\u30e2\u30fc\u30c9"
     },
@@ -200,6 +212,7 @@ const TRANSLATIONS = {
         langBtn:     "\uc5b8\uc5b4",
         chooseLang:  "\uc5b8\uc5b4\ub97c \uc120\ud0dd\ud558\uc138\uc694",
         closeBtn:    "\u2715 \ub2eb\ub2e4",
+        closeTheme:  "\u2715 \ub2eb\ub2e4",
         darkBtn:     "\ub2e4\uce74 \ubaa8\ub3c4",
         lightBtn:    "\ub77c\uc774\ud2b8 \ubaa8\ub3c4"
     },
@@ -215,8 +228,23 @@ const TRANSLATIONS = {
         langBtn:     "\u8bed\u8a00",
         chooseLang:  "\u9009\u62e9\u8bed\u8a00",
         closeBtn:    "\u2715 \u5173\u95ed",
+        closeTheme:  "\u2715 \u5173\u95ed",
         darkBtn:     "\u6df1\u8272\u6a21\u5f0f",
         lightBtn:    "\u6d45\u8272\u6a21\u5f0f"
+    }
+};
+const THEMES = {
+    modern: {
+        absent: "#2b2b2b",
+        present: "#b59f3b",
+        presentText: "white",
+        correct: "#538d4e"
+    },
+    xmas: {
+        absent: "#1a3a8f",
+        present: "gold",
+        presentText: "black",
+        correct: "green"
     }
 };
 const LANG_LIST = [
@@ -236,6 +264,11 @@ const LANG_LIST = [
     { code: "zh", flag: "🇨🇳", name: "\u4e2d\u6587" }
 ];
 let currentLang = "en";
+const THEME_LIST = [
+    {theme: "modern", name: "Modern"},
+    {theme: "xmas", name: "Christmas"}
+];
+let currentTheme = "modern";
 function applyBackground(code) {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     const bg = document.getElementById("bgLayer");
@@ -300,9 +333,10 @@ function applyLang(code) {
     document.getElementById("restartBtn").textContent    = t.retryBtn;
     document.getElementById("langBtn").textContent       = t.langBtn;
     document.getElementById("chooseLang").textContent    = t.chooseLang;
-    document.getElementById("close").textContent         = t.closeBtn;
+    document.getElementById("closeLang").textContent     = t.closeBtn;
+    document.getElementById("closeTheme").textContent    = t.closeTheme;
     document.getElementById("darkBtn").textContent       = t.darkBtn;
-    document.getElementById("lightBtn").textContent       = t.lightBtn;
+    document.getElementById("lightBtn").textContent      = t.lightBtn;
     applyBackground(code);
     const messageEl = document.getElementById("message");
     if (gameState === "win") {
@@ -322,6 +356,35 @@ function buildLangMenuItems() {
         </button>
     `).join("");
 }
+function applyTheme(theme) {
+    currentTheme = theme;
+    const th = THEMES[theme];
+    document.querySelectorAll(".absent").forEach(el => {
+        el.style.backgroundColor = th.absent;
+        document.documentElement.style.setProperty("--absent-color", th.absent);
+    });
+    document.querySelectorAll(".present").forEach(el => {
+        el.style.backgroundColor = th.present;
+        el.style.color = th.presentText;
+    });
+    document.documentElement.style.setProperty("--present-color", th.present);
+    document.documentElement.style.setProperty("--present-text-color", th.presentText);
+    document.querySelectorAll(".correct").forEach(el => {
+        el.style.backgroundColor = th.correct;
+        document.documentElement.style.setProperty("--correct-color", th.correct);
+    });
+    buildThemeMenuItems();
+}
+function buildThemeMenuItems() {
+    const grid = document.getElementById("themeMenuGrid");
+    if (!grid) return;
+    grid.innerHTML = THEME_LIST.map(t => `
+        <button class="theme-item${t.theme === currentTheme ? " active" : ""}"
+                onclick="selectTheme('${t.theme}')">
+            ${t.name}
+        </button>
+    `).join("");
+}
 function openLangMenu() {
     buildLangMenuItems();
     document.getElementById("langOverlay").style.display = "flex";
@@ -329,11 +392,23 @@ function openLangMenu() {
 function closeLangMenu() {
     document.getElementById("langOverlay").style.display = "none";
 }
+function openThemeMenu() {
+    buildThemeMenuItems();
+    document.getElementById("themeOverlay").style.display = "flex";
+}
+function closeThemeMenu() {
+    document.getElementById("themeOverlay").style.display = "none";
+}
 function selectLang(code) {
     applyLang(code);
     closeLangMenu();
 }
+function selectTheme(theme) {
+    applyTheme(theme);
+    closeThemeMenu();
+}
 document.getElementById("langBtn").addEventListener("click", openLangMenu);
+document.getElementById("themeBtn").addEventListener("click", openThemeMenu);
 function generateNumber() {
     let num = "";
     for (let i = 0; i < 5; i++) {
@@ -374,6 +449,7 @@ function submitGuess() {
         row[i].textContent = guess[i];
         if (guess[i] === answer[i]) {
             row[i].classList.add("correct");
+            row[i].style.backgroundColor = THEMES[currentTheme].correct;
             answerArr[i] = null;
             guessArr[i]  = null;
         }
@@ -383,9 +459,13 @@ function submitGuess() {
             let index = answerArr.indexOf(guessArr[i]);
             if (index !== -1) {
                 row[i].classList.add("present");
+                row[i].style.backgroundColor = THEMES[currentTheme].present;
+                row[i].style.color = currentTheme === "xmas" ? "black" : "white";
+                row[i].style.color = THEMES[currentTheme].presentText;
                 answerArr[index] = null;
             } else {
                 row[i].classList.add("absent");
+                row[i].style.backgroundColor = THEMES[currentTheme].absent;
             }
         }
     }
@@ -415,6 +495,7 @@ function restartGame() {
         for (let j = 0; j < 5; j++) {
             row[j].textContent = "";
             row[j].classList.remove("correct", "present", "absent");
+            row[j].style.backgroundColor = "";
         }
     }
     document.getElementById("guessInput").value    = "";
