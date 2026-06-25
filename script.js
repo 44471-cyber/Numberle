@@ -450,6 +450,7 @@ function submitGuess() {
         if (guess[i] === answer[i]) {
             row[i].classList.add("correct");
             row[i].style.backgroundColor = THEMES[currentTheme].correct;
+            row[i].style.color = "white";
             answerArr[i] = null;
             guessArr[i]  = null;
         }
@@ -460,12 +461,12 @@ function submitGuess() {
             if (index !== -1) {
                 row[i].classList.add("present");
                 row[i].style.backgroundColor = THEMES[currentTheme].present;
-                row[i].style.color = currentTheme === "xmas" ? "black" : "white";
                 row[i].style.color = THEMES[currentTheme].presentText;
                 answerArr[index] = null;
             } else {
                 row[i].classList.add("absent");
                 row[i].style.backgroundColor = THEMES[currentTheme].absent;
+                row[i].style.color = "white";
             }
         }
     }
@@ -510,3 +511,4 @@ guessInput.addEventListener("input", () => {
     guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
 });
 applyBackground(currentLang);
+applyTheme("modern");
