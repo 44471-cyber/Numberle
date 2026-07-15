@@ -1,12 +1,5 @@
-const DEFAULT_BG_IMAGE           = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
-const DEFAULT_BG_COLOR           = "#3050aa";
-const BG_BULGARIAN_IMAGE         = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(bulgarian).png')";
-const PT_PORTUGUESE_IMAGE        = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(portugal)%20(standard).png')";
-const PT_PORTUGUESE_MOBILE_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image%20(portugal)%20(mobile).png')";
-const RED_YELLOW_IMAGE           = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(red%20and%20yellow).png')";
-const RED_WHITE_IMAGE            = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(red%20and%20white).png')";
-const KR_KOREAN_IMAGE            = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(korean).png')";
-const DARK_MODE_IMAGE            = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(dark%20mode).png')"
+const DEFAULT_BG_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
+const DARK_MODE_IMAGE  = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(dark%20mode).png')"
 const TRANSLATIONS = {
     en: {
         subtitle:    "Guess the 5-digit number!",
@@ -20,7 +13,7 @@ const TRANSLATIONS = {
         langBtn:     "Language",
         chooseLang:  "Choose a Language",
         closeBtn:    "\u2715 Close",
-        closeTheme:    "\u2715 Close",
+        closeTheme:  "\u2715 Close",
         darkBtn:     "Dark mode",
         lightBtn:    "Light mode"
     },
@@ -269,61 +262,25 @@ const THEME_LIST = [
     {theme: "xmas", name: "Christmas"}
 ];
 let currentTheme = "modern";
-function applyBackground(code) {
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+function applyBackground() {
     const bg = document.getElementById("bgLayer");
-    function getBgForCode() {
-        if (code === "bg") {
-            bg.style.opacity = "1";
-            return BG_BULGARIAN_IMAGE;
-        } else if (code === "pt") {
-            bg.style.opacity = "1";
-            return isMobile ? PT_PORTUGUESE_MOBILE_IMAGE : PT_PORTUGUESE_IMAGE;
-        } else if (code === "zh" || code === "vn") {
-            bg.style.opacity = "0.65";
-            return RED_YELLOW_IMAGE;
-        } else if (code === "jp") {
-            bg.style.opacity = "0.65";
-            return RED_WHITE_IMAGE;
-        } else if (code === "kr") {
-            bg.style.opacity = "0.65";
-            return KR_KOREAN_IMAGE;
-        } else {
-            bg.style.opacity = "1";
-            return DEFAULT_BG_IMAGE;
-        }
-    }
+
     bg.style.opacity = "1";
-    if (code === "bg") {
-        bg.style.backgroundImage = BG_BULGARIAN_IMAGE;
-    } else if (code === "pt") {
-        bg.style.backgroundImage = isMobile
-            ? PT_PORTUGUESE_MOBILE_IMAGE
-            : PT_PORTUGUESE_IMAGE;
-    } else if (code === "zh" || code === "vn") {
-        bg.style.backgroundImage = RED_YELLOW_IMAGE;
-        bg.style.opacity = "0.65";
-    } else if (code === "jp") {
-        bg.style.backgroundImage = RED_WHITE_IMAGE;
-        bg.style.opacity = "0.65";
-    } else if (code === "kr") {
-        bg.style.backgroundImage = KR_KOREAN_IMAGE;
-        bg.style.opacity = "0.65";
-    } else {
-        bg.style.backgroundImage = DEFAULT_BG_IMAGE;
-    }
+    bg.style.backgroundImage = DEFAULT_BG_IMAGE;
+
     document.getElementById("darkBtn").onclick = function() {
         bg.style.backgroundImage = DARK_MODE_IMAGE;
         document.getElementById("darkBtn").style.display = "none";
         document.getElementById("lightBtn").style.display = "inline-block";
     };
+
     document.getElementById("lightBtn").onclick = function() {
-        bg.style.backgroundImage = getBgForCode();
+        bg.style.backgroundImage = DEFAULT_BG_IMAGE;
         document.getElementById("darkBtn").style.display = "inline-block";
         document.getElementById("lightBtn").style.display = "none";
     };
 }
-window.matchMedia("(max-width: 768px)").addEventListener("change", () => applyBackground(currentLang));
+
 function applyLang(code) {
     currentLang = code;
     const t = TRANSLATIONS[code];
@@ -337,7 +294,7 @@ function applyLang(code) {
     document.getElementById("closeTheme").textContent    = t.closeTheme;
     document.getElementById("darkBtn").textContent       = t.darkBtn;
     document.getElementById("lightBtn").textContent      = t.lightBtn;
-    applyBackground(code);
+    applyBackground();
     const messageEl = document.getElementById("message");
     if (gameState === "win") {
         messageEl.textContent = t.win;
@@ -510,5 +467,5 @@ guessInput.setAttribute("inputmode", "numeric");
 guessInput.addEventListener("input", () => {
     guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
 });
-applyBackground(currentLang);
+applyBackground();
 applyTheme("modern");
