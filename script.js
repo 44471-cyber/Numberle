@@ -390,7 +390,7 @@ function submitGuess() {
     var guess     = input.value;
     if (!/^\d{5}$/.test(guess)) {
         messageEl.textContent = guess === "" ? t.empty : t.invalid;
-        setTimeout(() => { messageEl.textContent = ""; }, 2000);
+        setTimeout(function() { messageEl.textContent = ""; }, 2000);
         input.value = "";
         return;
     }
@@ -460,7 +460,7 @@ function restartGame() {
 }
 var guessInput = document.getElementById("guessInput");
 guessInput.setAttribute("inputmode", "numeric");
-guessInput.addEventListener("input", () => {
+guessInput.addEventListener("input", function() {
     guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
 });
 applyBackground();
