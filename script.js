@@ -1,6 +1,6 @@
-const DEFAULT_BG_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
-const DARK_MODE_IMAGE  = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(dark%20mode).png')"
-const TRANSLATIONS = {
+var DEFAULT_BG_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
+var DARK_MODE_IMAGE  = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(dark%20mode).png')"
+var TRANSLATIONS = {
     en: {
         subtitle:    "Guess the 5-digit number!",
         placeholder: "Enter 5 numbers",
@@ -226,7 +226,7 @@ const TRANSLATIONS = {
         lightBtn:    "\u6d45\u8272\u6a21\u5f0f"
     }
 };
-const THEMES = {
+var THEMES = {
     modern: {
         absent: "#2b2b2b",
         present: "#b59f3b",
@@ -240,7 +240,7 @@ const THEMES = {
         correct: "green"
     }
 };
-const LANG_LIST = [
+var LANG_LIST = [
     { code: "en", flag: "🇬🇧", name: "English"    },
     { code: "pt", flag: "🇵🇹", name: "Portugu\u00eas" },
     { code: "es", flag: "🇪🇸", name: "Espa\u00f1ol"   },
@@ -256,34 +256,30 @@ const LANG_LIST = [
     { code: "kr", flag: "🇰🇷", name: "\ud55c\uad6d\uc778"},
     { code: "zh", flag: "🇨🇳", name: "\u4e2d\u6587" }
 ];
-let currentLang = "en";
-const THEME_LIST = [
+var currentLang = "en";
+var THEME_LIST = [
     {theme: "modern", name: "Modern"},
     {theme: "xmas", name: "Christmas"}
 ];
-let currentTheme = "modern";
+var currentTheme = "modern";
 function applyBackground() {
-    const bg = document.getElementById("bgLayer");
-
+    var bg = document.getElementById("bgLayer");
     bg.style.opacity = "1";
     bg.style.backgroundImage = DEFAULT_BG_IMAGE;
-
     document.getElementById("darkBtn").onclick = function() {
         bg.style.backgroundImage = DARK_MODE_IMAGE;
         document.getElementById("darkBtn").style.display = "none";
         document.getElementById("lightBtn").style.display = "inline-block";
     };
-
     document.getElementById("lightBtn").onclick = function() {
         bg.style.backgroundImage = DEFAULT_BG_IMAGE;
         document.getElementById("darkBtn").style.display = "inline-block";
         document.getElementById("lightBtn").style.display = "none";
     };
 }
-
 function applyLang(code) {
     currentLang = code;
-    const t = TRANSLATIONS[code];
+    var t = TRANSLATIONS[code];
     document.getElementById("subtitle").textContent      = t.subtitle;
     document.getElementById("guessInput").placeholder    = t.placeholder;
     document.getElementById("guessBtn").textContent      = t.guessBtn;
@@ -295,7 +291,7 @@ function applyLang(code) {
     document.getElementById("darkBtn").textContent       = t.darkBtn;
     document.getElementById("lightBtn").textContent      = t.lightBtn;
     applyBackground();
-    const messageEl = document.getElementById("message");
+    var messageEl = document.getElementById("message");
     if (gameState === "win") {
         messageEl.textContent = t.win;
     } else if (gameState === "gameover") {
@@ -304,7 +300,7 @@ function applyLang(code) {
     buildLangMenuItems();
 }
 function buildLangMenuItems() {
-    const grid = document.getElementById("langMenuGrid");
+    var grid = document.getElementById("langMenuGrid");
     if (!grid) return;
     grid.innerHTML = LANG_LIST.map(l => `
         <button class="lang-item${l.code === currentLang ? " active" : ""}"
@@ -315,7 +311,7 @@ function buildLangMenuItems() {
 }
 function applyTheme(theme) {
     currentTheme = theme;
-    const th = THEMES[theme];
+    var th = THEMES[theme];
     document.querySelectorAll(".absent").forEach(el => {
         el.style.backgroundColor = th.absent;
         document.documentElement.style.setProperty("--absent-color", th.absent);
@@ -333,7 +329,7 @@ function applyTheme(theme) {
     buildThemeMenuItems();
 }
 function buildThemeMenuItems() {
-    const grid = document.getElementById("themeMenuGrid");
+    var grid = document.getElementById("themeMenuGrid");
     if (!grid) return;
     grid.innerHTML = THEME_LIST.map(t => `
         <button class="theme-item${t.theme === currentTheme ? " active" : ""}"
@@ -367,31 +363,31 @@ function selectTheme(theme) {
 document.getElementById("langBtn").addEventListener("click", openLangMenu);
 document.getElementById("themeBtn").addEventListener("click", openThemeMenu);
 function generateNumber() {
-    let num = "";
-    for (let i = 0; i < 5; i++) {
+    var num = "";
+    for (var i = 0; i < 5; i++) {
         num += Math.floor(Math.random() * 10);
     }
     return num;
 }
-let answer     = generateNumber();
-let currentRow = 0;
-let gameState  = null;
-const board    = document.getElementById("board");
-for (let i = 0; i < 6; i++) {
-    const row = document.createElement("div");
+var answer     = generateNumber();
+var currentRow = 0;
+var gameState  = null;
+var board    = document.getElementById("board");
+for (var i = 0; i < 6; i++) {
+    var row = document.createElement("div");
     row.classList.add("row");
-    for (let j = 0; j < 5; j++) {
-        const cell = document.createElement("div");
+    for (var j = 0; j < 5; j++) {
+        var cell = document.createElement("div");
         cell.classList.add("cell");
         row.appendChild(cell);
     }
     board.appendChild(row);
 }
 function submitGuess() {
-    const input     = document.getElementById("guessInput");
-    const messageEl = document.getElementById("message");
-    const t         = TRANSLATIONS[currentLang];
-    const guess     = input.value;
+    var input     = document.getElementById("guessInput");
+    var messageEl = document.getElementById("message");
+    var t         = TRANSLATIONS[currentLang];
+    var guess     = input.value;
     if (!/^\d{5}$/.test(guess)) {
         messageEl.textContent = guess === "" ? t.empty : t.invalid;
         setTimeout(() => { messageEl.textContent = ""; }, 2000);
@@ -399,10 +395,10 @@ function submitGuess() {
         return;
     }
     if (currentRow >= 6) return;
-    const row     = board.children[currentRow].children;
-    let answerArr = answer.split("");
-    let guessArr  = guess.split("");
-    for (let i = 0; i < 5; i++) {
+    var row     = board.children[currentRow].children;
+    var answerArr = answer.split("");
+    var guessArr  = guess.split("");
+    for (var i = 0; i < 5; i++) {
         row[i].textContent = guess[i];
         if (guess[i] === answer[i]) {
             row[i].classList.add("correct");
@@ -412,9 +408,9 @@ function submitGuess() {
             guessArr[i]  = null;
         }
     }
-    for (let i = 0; i < 5; i++) {
+    for (var i = 0; i < 5; i++) {
         if (guessArr[i] !== null) {
-            let index = answerArr.indexOf(guessArr[i]);
+            var index = answerArr.indexOf(guessArr[i]);
             if (index !== -1) {
                 row[i].classList.add("present");
                 row[i].style.backgroundColor = THEMES[currentTheme].present;
@@ -448,9 +444,9 @@ function restartGame() {
     answer     = generateNumber();
     currentRow = 0;
     gameState  = null;
-    for (let i = 0; i < 6; i++) {
-        const row = board.children[i].children;
-        for (let j = 0; j < 5; j++) {
+    for (var i = 0; i < 6; i++) {
+        var row = board.children[i].children;
+        for (var j = 0; j < 5; j++) {
             row[j].textContent = "";
             row[j].classList.remove("correct", "present", "absent");
             row[j].style.backgroundColor = "";
@@ -462,7 +458,7 @@ function restartGame() {
     document.getElementById("guessBtn").style.display   = "inline-block";
     console.log("New Answer:", answer);
 }
-const guessInput = document.getElementById("guessInput");
+var guessInput = document.getElementById("guessInput");
 guessInput.setAttribute("inputmode", "numeric");
 guessInput.addEventListener("input", () => {
     guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
