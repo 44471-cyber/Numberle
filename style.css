@@ -114,7 +114,11 @@ button:hover {
 }
 #langBtn:hover {
     background-color: #1556aa;
-    border-color: #051c3b;
+    border-color: #051c3a;
+}
+#langBtn:active {
+    background-color: #3869a8;
+    border-color: #28599e;
 }
 #separate {
     display: inline-flex;
