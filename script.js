@@ -1,5 +1,6 @@
 var DEFAULT_BG_IMAGE = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png')";
 var DARK_MODE_IMAGE  = "url('https://raw.githubusercontent.com/44471-cyber/Numberle/refs/heads/main/background%20image%20(dark%20mode).png')"
+
 var TRANSLATIONS = {
     en: {
         subtitle:    "Guess the 5-digit number!",
@@ -226,6 +227,7 @@ var TRANSLATIONS = {
         lightBtn:    "\u6d45\u8272\u6a21\u5f0f"
     }
 };
+
 var THEMES = {
     modern: {
         absent: "#2b2b2b",
@@ -238,8 +240,15 @@ var THEMES = {
         present: "gold",
         presentText: "black",
         correct: "green"
+    },
+    portugal: {
+        absent: "#da291c",
+        present: "#ffe900",
+        presentText: "black",
+        correct: "#046a38"
     }
 };
+
 var LANG_LIST = [
     { code: "en", flag: "🇬🇧", name: "English"    },
     { code: "pt", flag: "🇵🇹", name: "Portugu\u00eas" },
@@ -256,16 +265,20 @@ var LANG_LIST = [
     { code: "kr", flag: "🇰🇷", name: "\ud55c\uad6d\uc778"},
     { code: "zh", flag: "🇨🇳", name: "\u4e2d\u6587" }
 ];
+
 var currentLang = "en";
 var THEME_LIST = [
     {theme: "modern", name: "Modern"},
-    {theme: "xmas", name: "Christmas"}
+    {theme: "xmas", name: "Christmas"},
+    {theme: "portugal", name: "Portugal"}
 ];
 var currentTheme = "modern";
+
 function applyBackground() {
     var bg = document.getElementById("bgLayer");
     bg.style.opacity = "1";
     bg.style.backgroundImage = DEFAULT_BG_IMAGE;
+    
     document.getElementById("darkBtn").onclick = function() {
         bg.style.backgroundImage = DARK_MODE_IMAGE;
         document.getElementById("darkBtn").style.display = "none";
@@ -280,18 +293,21 @@ function applyBackground() {
 function applyLang(code) {
     currentLang = code;
     var t = TRANSLATIONS[code];
-    document.getElementById("subtitle").textContent      = t.subtitle;
-    document.getElementById("guessInput").placeholder    = t.placeholder;
-    document.getElementById("guessBtn").textContent      = t.guessBtn;
-    document.getElementById("restartBtn").textContent    = t.retryBtn;
-    document.getElementById("langBtn").textContent       = t.langBtn;
-    document.getElementById("chooseLang").textContent    = t.chooseLang;
-    document.getElementById("closeLang").textContent     = t.closeBtn;
-    document.getElementById("closeTheme").textContent    = t.closeTheme;
-    document.getElementById("darkBtn").textContent       = t.darkBtn;
-    document.getElementById("lightBtn").textContent      = t.lightBtn;
+    
+    document.getElementById("subtitle").textContent = t.subtitle;
+    document.getElementById("guessInput").placeholder = t.placeholder;
+    document.getElementById("guessBtn").textContent = t.guessBtn;
+    document.getElementById("restartBtn").textContent = t.retryBtn;
+    document.getElementById("langBtn").textContent = t.langBtn;
+    document.getElementById("chooseLang").textContent = t.chooseLang;
+    document.getElementById("closeLang").textContent = t.closeBtn;
+    document.getElementById("closeTheme").textContent = t.closeTheme;
+    document.getElementById("darkBtn").textContent = t.darkBtn;
+    document.getElementById("lightBtn").textContent = t.lightBtn;
+    
     applyBackground();
     var messageEl = document.getElementById("message");
+    
     if (gameState === "win") {
         messageEl.textContent = t.win;
     } else if (gameState === "gameover") {
@@ -299,6 +315,7 @@ function applyLang(code) {
     }
     buildLangMenuItems();
 }
+
 function buildLangMenuItems() {
     var grid = document.getElementById("langMenuGrid");
     if (!grid) return;
@@ -309,28 +326,36 @@ function buildLangMenuItems() {
         </button>
     `).join("");
 }
+
 function applyTheme(theme) {
     currentTheme = theme;
     var th = THEMES[theme];
+    
     document.querySelectorAll(".absent").forEach(el => {
         el.style.backgroundColor = th.absent;
         document.documentElement.style.setProperty("--absent-color", th.absent);
     });
+    
     document.querySelectorAll(".present").forEach(el => {
         el.style.backgroundColor = th.present;
         el.style.color = th.presentText;
     });
+    
     document.documentElement.style.setProperty("--present-color", th.present);
     document.documentElement.style.setProperty("--present-text-color", th.presentText);
     document.querySelectorAll(".correct").forEach(el => {
         el.style.backgroundColor = th.correct;
         document.documentElement.style.setProperty("--correct-color", th.correct);
     });
+    
     buildThemeMenuItems();
 }
+
 function buildThemeMenuItems() {
     var grid = document.getElementById("themeMenuGrid");
+    
     if (!grid) return;
+    
     grid.innerHTML = THEME_LIST.map(t => `
         <button class="theme-item${t.theme === currentTheme ? " active" : ""}"
                 onclick="selectTheme('${t.theme}')">
@@ -338,30 +363,38 @@ function buildThemeMenuItems() {
         </button>
     `).join("");
 }
+
 function openLangMenu() {
     buildLangMenuItems();
     document.getElementById("langOverlay").style.display = "flex";
 }
+
 function closeLangMenu() {
     document.getElementById("langOverlay").style.display = "none";
 }
+
 function openThemeMenu() {
     buildThemeMenuItems();
     document.getElementById("themeOverlay").style.display = "flex";
 }
+
 function closeThemeMenu() {
     document.getElementById("themeOverlay").style.display = "none";
 }
+
 function selectLang(code) {
     applyLang(code);
     closeLangMenu();
 }
+
 function selectTheme(theme) {
     applyTheme(theme);
     closeThemeMenu();
 }
+
 document.getElementById("langBtn").addEventListener("click", openLangMenu);
 document.getElementById("themeBtn").addEventListener("click", openThemeMenu);
+
 function generateNumber() {
     var num = "";
     for (var i = 0; i < 5; i++) {
@@ -369,35 +402,44 @@ function generateNumber() {
     }
     return num;
 }
-var answer     = generateNumber();
+
+var answer = generateNumber();
 var currentRow = 0;
-var gameState  = null;
-var board    = document.getElementById("board");
+var gameState = null;
+var board = document.getElementById("board");
+
 for (var i = 0; i < 6; i++) {
     var row = document.createElement("div");
     row.classList.add("row");
+    
     for (var j = 0; j < 5; j++) {
         var cell = document.createElement("div");
         cell.classList.add("cell");
         row.appendChild(cell);
     }
+    
     board.appendChild(row);
 }
+
 function submitGuess() {
     var input     = document.getElementById("guessInput");
     var messageEl = document.getElementById("message");
     var t         = TRANSLATIONS[currentLang];
     var guess     = input.value;
+    
     if (!/^\d{5}$/.test(guess)) {
         messageEl.textContent = guess === "" ? t.empty : t.invalid;
         setTimeout(function() { messageEl.textContent = ""; }, 2000);
         input.value = "";
         return;
     }
+    
     if (currentRow >= 6) return;
-    var row     = board.children[currentRow].children;
+    
+    var row = board.children[currentRow].children;
     var answerArr = answer.split("");
-    var guessArr  = guess.split("");
+    var guessArr = guess.split("");
+    
     for (var i = 0; i < 5; i++) {
         row[i].textContent = guess[i];
         if (guess[i] === answer[i]) {
@@ -408,6 +450,7 @@ function submitGuess() {
             guessArr[i]  = null;
         }
     }
+    
     for (var i = 0; i < 5; i++) {
         if (guessArr[i] !== null) {
             var index = answerArr.indexOf(guessArr[i]);
@@ -423,6 +466,7 @@ function submitGuess() {
             }
         }
     }
+    
     if (guess === answer) {
         gameState = "win";
         messageEl.textContent = t.win;
@@ -431,8 +475,10 @@ function submitGuess() {
         input.value = "";
         return;
     }
+    
     currentRow++;
     input.value = "";
+    
     if (currentRow === 6) {
         gameState = "gameover";
         messageEl.textContent = t.gameover + answer;
@@ -440,6 +486,7 @@ function submitGuess() {
         document.getElementById("guessBtn").style.display   = "none";
     }
 }
+
 function restartGame() {
     answer     = generateNumber();
     currentRow = 0;
@@ -458,10 +505,12 @@ function restartGame() {
     document.getElementById("guessBtn").style.display   = "inline-block";
     console.log("New Answer:", answer);
 }
+
 var guessInput = document.getElementById("guessInput");
 guessInput.setAttribute("inputmode", "numeric");
 guessInput.addEventListener("input", function() {
     guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
 });
+
 applyBackground();
 applyTheme("modern");
