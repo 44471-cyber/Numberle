@@ -156,6 +156,10 @@ button:hover {
     background-position: right center;
     text-decoration: none;
 }
+#itchBtn {
+    margin: auto;
+    margin-top: 6px;
+}
 .lang-overlay, .theme-overlay {
     position: fixed;
     top: 0;
