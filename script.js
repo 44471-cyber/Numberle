@@ -392,6 +392,10 @@ function selectTheme(theme) {
     closeThemeMenu();
 }
 
+function redirectBtn() {
+    window.location.href = "https://jaylus64.itch.io/numberle";
+}
+
 document.getElementById("langBtn").addEventListener("click", openLangMenu);
 document.getElementById("themeBtn").addEventListener("click", openThemeMenu);
 
