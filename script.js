@@ -267,11 +267,13 @@ var LANG_LIST = [
 ];
 
 var currentLang = "en";
+
 var THEME_LIST = [
     {theme: "modern", name: "Modern"},
     {theme: "xmas", name: "Christmas"},
     {theme: "portugal", name: "Portugal"}
 ];
+
 var currentTheme = "modern";
 
 function applyBackground() {
@@ -284,6 +286,7 @@ function applyBackground() {
         document.getElementById("darkBtn").style.display = "none";
         document.getElementById("lightBtn").style.display = "inline-block";
     };
+    
     document.getElementById("lightBtn").onclick = function() {
         bg.style.backgroundImage = DEFAULT_BG_IMAGE;
         document.getElementById("darkBtn").style.display = "inline-block";
@@ -306,6 +309,7 @@ function applyLang(code) {
     document.getElementById("lightBtn").textContent = t.lightBtn;
     
     applyBackground();
+    
     var messageEl = document.getElementById("message");
     
     if (gameState === "win") {
@@ -313,12 +317,15 @@ function applyLang(code) {
     } else if (gameState === "gameover") {
         messageEl.textContent = t.gameover + answer;
     }
+    
     buildLangMenuItems();
 }
 
 function buildLangMenuItems() {
     var grid = document.getElementById("langMenuGrid");
+    
     if (!grid) return;
+    
     grid.innerHTML = LANG_LIST.map(l => `
         <button class="lang-item${l.code === currentLang ? " active" : ""}"
                 onclick="selectLang('${l.code}')">
@@ -499,6 +506,7 @@ function restartGame() {
             row[j].style.backgroundColor = "";
         }
     }
+    
     document.getElementById("guessInput").value    = "";
     document.getElementById("message").textContent = "";
     document.getElementById("restartBtn").style.display = "none";
