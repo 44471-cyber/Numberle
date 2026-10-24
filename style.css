@@ -7,10 +7,7 @@ body {
 }
 #bgLayer {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     background-image: url('https://raw.githubusercontent.com/44471-cyber/Numberle/main/background%20image.png');
     background-attachment: fixed;
     background-size: cover;
@@ -73,7 +70,7 @@ input {
     width: 280px;
     height: 29px;
     text-align: left;
-    border-color: #2b2b2b;
+    border: 1px solid black;
     cursor: text;
     vertical-align: middle;
     margin: 0;
